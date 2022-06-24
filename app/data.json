@@ -1,0 +1,29 @@
+[
+    {
+        "id": 0,
+        "image": "https://milk717.github.io/app/conan.jpg",
+        "likes": 12,
+        "date": "June 21",
+        "content": "요즘에는 괴도키드 나오는 에피소드가 없다ㅜㅜ",
+        "liked": false,
+        "user": "Sumin Kim"
+    },
+    {
+        "id": 1,
+        "image": "https://milk717.github.io/app/conan.jpg",
+        "likes": 18,
+        "date": "May 4",
+        "content": "진실은 언제나 하나",
+        "liked": false,
+        "user": "Conan"
+    },
+    {
+        "id": 2,
+        "image": "https://milk717.github.io/app/heiji.jpg",
+        "likes": 17,
+        "date": "January 17",
+        "content": "작화 미쳤당",
+        "liked": false,
+        "user": "Gingin"
+    }
+]
