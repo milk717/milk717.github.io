@@ -11,6 +11,7 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "14.1.4",
+    "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18"
   },
