@@ -8,7 +8,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({post}) => {
   return (
-    <div className="flex gap-x-3 rounded-xl border p-4">
+    <div className="flex gap-x-3 rounded-xl border p-4 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
       <Image
         className="rounded h-32"
         width={128}
