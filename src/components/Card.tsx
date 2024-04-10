@@ -9,10 +9,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({post}) => {
   return (
-    <Link
-      as={`/post/${post.slug}`}
-      href="/post/[slug]"
-      className="hover:underline">
+    <Link as={`/post/${post.slug}`} href="/post/[slug]" className="bg-white">
       <div className="flex gap-x-3 rounded-xl border p-4 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
         <Image
           className="rounded h-32"
