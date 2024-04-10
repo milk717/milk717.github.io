@@ -43,7 +43,7 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
     </span>
   ),
   strong: props => (
-    <strong className="font-bold text-teal-900 leading-relaxed" {...props}>
+    <strong className="font-bold text-violet-900 leading-relaxed" {...props}>
       {props.children}
     </strong>
   ),
@@ -68,6 +68,36 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
     <ol className="leading-relaxed list-decimal ms-5" {...props}>
       {props.children}
     </ol>
+  ),
+  table: props => (
+    <table className="text-gray-700 border-collapse table-auto my-4" {...props}>
+      {props.children}
+    </table>
+  ),
+  thead: props => (
+    <thead
+      className="text-gray-900 rounded-lg bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50"
+      {...props}>
+      {props.children}
+    </thead>
+  ),
+  th: props => (
+    <th
+      scope="col"
+      className="px-6 py-1.5 font-semibold first:rounded-s-lg last:rounded-e-lg"
+      {...props}>
+      {props.children}
+    </th>
+  ),
+  tr: props => (
+    <tr className="border-b last:border-none" {...props}>
+      {props.children}
+    </tr>
+  ),
+  td: props => (
+    <td className="px-6 py-3" {...props}>
+      {props.children}
+    </td>
   ),
 };
 
