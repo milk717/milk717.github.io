@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<PropsWithChildren> = ({children}) => {
   return (
     <html lang="ko">
-      <body className="p-4 max-w-screen-lg mx-auto">{children}</body>
+      <body className="bg-default p-4 max-w-screen-lg mx-auto">{children}</body>
     </html>
   );
 };
