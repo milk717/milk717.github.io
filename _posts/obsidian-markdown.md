@@ -1,5 +1,4 @@
 ---
-slug: "/making-blog1"
 date: "2024-04-08"
 title: "어떻게 하면 마크다운 블로그에서 게시글을 편하게 작성할 수 있을까?"
 excerpt: "excerpt sdkfajfkljsklf"
@@ -17,7 +16,7 @@ thumbnail: "./images/img-1.png"
 이번 게시글에서는 옵시디언을 마치 상용 블로그 서비스의 게시글 작성 에디터로 탈바꿈시켜 주는 세팅 방법에 관해 설명하고 있습니다. 더 이상 힘들게 블로깅 하지 마세요!
 # 옵시디언 세팅 방법
 ## 게시글에 이미지를 쉽게 첨부하기 위한 세팅
-여러분은 마크다운 블로그 게시글 작성 시 해당 게시글에 들어가는 이미지들을 어떻게 관리하시나요? 
+여러분은 마크다운 블로그 게시글 작성 시 해당 게시글에 들어가는 이미지들을 어떻게 관리하시나요?
 저는 아래와 같은 폴더 구조로 이미지를 관리하고 있습니다.
 ![게시글, 이미지 폴더구조](images/img-5.png)
 각 게시글에 해당하는 폴더 내부에 마크다운 파일, 마크다운 파일 안에 들어갈 이미지들이 있는 폴더를 두어 관리하는 형태죠. 따라서 블로그에 이미지를 첨부하기 위해서는 `images`폴더에 이미지를 넣고 이 경로를 마크다운 문법으로 작성해서 추가해야 합니다. 이 과정이 정말 번거롭지 않으셨나요?
@@ -41,9 +40,9 @@ thumbnail: "./images/img-1.png"
 1. [Paste image rename](obsidian://show-plugin?id=obsidian-paste-image-rename) 플러그인을 설치합니다.
 2. 플러그인 설정에서 아래 이미지와 같이 설정합니다.
    ![Paste image rename 플러그인 설정](images/img-7.png)
-   `Image name pattern` 옵션은 붙여넣기한 이미지의 이름을 결정하는 옵션입니다. 저는 img라는 이름으로 설정되도록 해서 붙여넣기한 이미지의 이름이 `img`, `img-1`, `img-2`,.... 으로 설정되도록 했죠. 
+   `Image name pattern` 옵션은 붙여넣기한 이미지의 이름을 결정하는 옵션입니다. 저는 img라는 이름으로 설정되도록 해서 붙여넣기한 이미지의 이름이 `img`, `img-1`, `img-2`,.... 으로 설정되도록 했죠.
    `{{fileNmae}}` 템플릿을 사용해서 이미지 이름에 파일명을 넣을 수도 있고, `{{DATE:YYYYMMDD}}` 템플릿을 통해 타임스템프를 넣을 수도 있습니다. 하지만 저는 단순한 이름이 좋아서 `img`로 설정했습니다.
-   
+
    `Auto rename`옵션은 이미지 이름이 자동으로 변경될지 결정하는 옵션입니다. 만약 저 옵션을 꺼둔다면, 아래 보이는 것 처럼 이미지를 붙여넣을 때 다이얼로그가 뜨고 이름을 지정할 수 있습니다.
    ![Auto rename 옵션이 꺼져있을 때](images/img-8.png)
 ### 옵시디언에서 이미지 캡션을 보기 위한 설정
@@ -53,7 +52,7 @@ thumbnail: "./images/img-1.png"
 [image-captions 플러그인](obsidian://show-plugin?id=image-captions) 을 설치하기만 하면 별다른 설정을 하지 않아도 옵시디언에서 이미지 캡션을 볼 수 있습니다.
 이 설정을 하지 않아도 글을 작성하고 게시글을 올리는데는 전혀 지장이 없지만, 옵시디언에서 보이는 내용과 실제 블로그에서 보이는 내용이 최대한 비슷해야 더 쾌적환 블로깅 환경을 만들 수 있으므로 설정하는 것이 좋습니다.
 ### 실수로 추가한 이미지를 쉽게 제거하기 위한 설정
-여기까지 제가 안내한 대로 설정했다면 붙여넣기 한 이미지가 자동으로 `images` 폴더에 저장됩니다. 하지만 글을 작성하다 보면 실수로 이미지를 추가하는 경우가 있기도 합니다. 이때 게시글에서 이미지 링크를 지우고, `images`폴더에 들어가서 사진 파일을 삭제하는 것은 정말 귀찮은 일입니다. 이럴 때는 [Clear unused Image](obsidian://show-plugin?id=oz-clear-unused-images) 플러그인을 사용해서 귀찮은 과정을 손쉽게 바꿀 수 있습니다. 
+여기까지 제가 안내한 대로 설정했다면 붙여넣기 한 이미지가 자동으로 `images` 폴더에 저장됩니다. 하지만 글을 작성하다 보면 실수로 이미지를 추가하는 경우가 있기도 합니다. 이때 게시글에서 이미지 링크를 지우고, `images`폴더에 들어가서 사진 파일을 삭제하는 것은 정말 귀찮은 일입니다. 이럴 때는 [Clear unused Image](obsidian://show-plugin?id=oz-clear-unused-images) 플러그인을 사용해서 귀찮은 과정을 손쉽게 바꿀 수 있습니다.
 
 [Clear unused Image](obsidian://show-plugin?id=oz-clear-unused-images) 플러그인을 설치한 후 옵시디언의 `Cmd + P` 단축키를 사용해 명령어 탈레트를 켜고 명령어를 실행시키면 현재 참조되고있지 않은 이미지를 자동으로 삭제해줍니다. 마치 수동으로 실행하는 가비지 컬렉터같죠?
 ![](images/img-9.png)
@@ -66,17 +65,17 @@ thumbnail: "./images/img-1.png"
 >[!note]
 >아래 내용은 Gatsby나 Next.js 블로그처럼 React 라이브러리 기반으로 만들어진 프레임워크로 구축된 블로그에만 해당하는 내용입니다.
 
-옵시디언에는 [다양한 종류의 콜아웃](https://help.obsidian.md/Editing+and+formatting/Callouts)이 있습니다. 
+옵시디언에는 [다양한 종류의 콜아웃](https://help.obsidian.md/Editing+and+formatting/Callouts)이 있습니다.
 ![옵시디언의 다양한 콜아웃](images/img-1.png)
 
-콜아웃은 아래와 같은 문법을 사용해서 나타낼 수 있죠. 
+콜아웃은 아래와 같은 문법을 사용해서 나타낼 수 있죠.
 ```
 > [!note]
 > aa
 ```
 
 이렇게 편리한 콜아웃 문법을 블로그에서도 사용하면 좋지만, 이는 마크다운 표준 문법이 아닌 옵시디언만의 문법입니다.
-때문에 옵시디언에서 콜아웃을 작성하더라도 블로그에서는 단지 `blockquote`로 파싱될 뿐입니다. 
+때문에 옵시디언에서 콜아웃을 작성하더라도 블로그에서는 단지 `blockquote`로 파싱될 뿐입니다.
 그래서 저는 이 문제를 해결하기 위해 [obsidian-callouts-markdown - npm](https://www.npmjs.com/package/obsidian-callouts-markdown?activeTab=readme) 라이브러리를 만들었습니다.
 `MDXProvider` 혹은 `react-markdown`을 사용하는 React 기반 마크다운 블로그에서 `blockquote`로 파싱되는 컴포넌트를 해당 라이브러리의 컴포넌트로 대체하면 옵시디언의 콜아웃 문법으로 블로그 게시글을 작성할 수 있습니다.
 

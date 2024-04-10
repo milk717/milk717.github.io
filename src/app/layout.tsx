@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<PropsWithChildren> = ({children}) => {
   return (
     <html lang="ko">
-      <body className="bg-default p-4 max-w-screen-lg mx-auto">
+      <body className="bg-default p-4 max-w-4xl mx-auto">
         <Navigation />
         {children}
       </body>

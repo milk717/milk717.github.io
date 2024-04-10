@@ -10,30 +10,26 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({post}) => {
   return (
     <Link as={`/post/${post.slug}`} href="/post/[slug]" className="bg-white">
-      <div className="flex gap-x-3 rounded-xl border p-4 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
+      <div className="flex gap-x-3 rounded-lg border p-4 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
         <Image
-          className="rounded h-32"
+          className="rounded w-16 sm:w-24"
           width={128}
           height={128}
           src="https://www.milk717.com/static/8eecbbb84609a5a15f7af115014f5d14/36b38/img-1.webp"
           alt={`${post.title} 썸네일 이미지`}
         />
         <div className="flex flex-col justify-between flex-1">
-          <div className="flex flex-col gap-y-1 ps-2">
+          <div className="flex flex-col gap-y-1">
             <p className="font-semibold">{post.title}</p>
             <p className="text-sm text-gray-500">{post.excerpt}</p>
           </div>
-          <div className="flex items-center justify-between">
-            <div className="flex gap-2">
-              {post.tags.map(tag => (
-                <p
-                  key={tag}
-                  className="px-2 py-1 bg-violet-50 rounded-2xl text-xs text-violet-900">
-                  {tag}
-                </p>
-              ))}
-            </div>
-            <p className="text-xs text-gray-500">{post.date}</p>
+          <div className="flex items-center justify-between gap-x-2">
+            <p className="flex gap-2 text-xs text-neutral-400">
+              {post.tags.map(tag => `#${tag} `)}
+            </p>
+            <p className="text-xs text-neutral-400 flex-shrink-0">
+              {post.date}
+            </p>
           </div>
         </div>
       </div>

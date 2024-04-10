@@ -7,6 +7,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'www.milk717.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'avatars.githubusercontent.com',
+            },
         ],
     },
 };
