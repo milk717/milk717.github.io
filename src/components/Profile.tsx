@@ -20,7 +20,7 @@ const Profile = () => {
           </p>
         </div>
       </div>
-      <div className="flex gap-6">
+      <div className="flex flex-wrap gap-x-6 gap-y-1">
         <Link
           className="flex items-center gap-1.5 h-fit cursor-pointer hover:underline"
           href="mailto:robolindasoo@gmail.com">
