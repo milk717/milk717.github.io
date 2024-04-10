@@ -19,15 +19,13 @@ export default async function Post({params}: Params) {
   }
 
   return (
-    <main>
-      <article>
-        <MDXRemote
-          components={MdxComponents}
-          source={post.content}
-          options={{mdxOptions: {remarkPlugins: [remarkGfm]}}}
-        />
-      </article>
-    </main>
+    <article className="mx-auto max-w-screen-sm">
+      <MDXRemote
+        components={MdxComponents}
+        source={post.content}
+        options={{mdxOptions: {remarkPlugins: [remarkGfm]}}}
+      />
+    </article>
   );
 }
 
