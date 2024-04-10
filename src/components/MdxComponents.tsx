@@ -3,7 +3,7 @@ import {MDXProvider} from '@mdx-js/react';
 
 const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
   h1: props => (
-    <h1 className="font-bold text-3xl text-gray-900 my-4" {...props}>
+    <h1 className="font-bold text-3xl text-gray-900 my-2" {...props}>
       {props.children}
     </h1>
   ),
@@ -33,12 +33,12 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
     </h6>
   ),
   p: props => (
-    <p className="text-base text-gray-800 leading-relaxed" {...props}>
+    <p className="my-2 text-base text-gray-800 leading-7" {...props}>
       {props.children}
     </p>
   ),
   span: props => (
-    <span className="text-base text-gray-800 leading-relaxed" {...props}>
+    <span className="text-base text-gray-800 leading-7" {...props}>
       {props.children}
     </span>
   ),
