@@ -2,6 +2,7 @@ import {getAllPosts} from '@/lib/api';
 import Card from '@/components/Card';
 import Profile from '@/components/Profile';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   const allPosts = getAllPosts();
@@ -19,7 +20,9 @@ export default function Home() {
               <Card key={post.slug} post={post} />
             ))}
           </div>
-          <p className="flex items-center gap-1 text-neutral-500 text-lg mt-2 px-2 py-2 rounded-lg cursor-pointer w-fit hover:bg-slate-100">
+          <Link
+            className="flex items-center gap-1 text-neutral-500 text-lg mt-2 px-2 py-2 rounded-lg cursor-pointer w-fit hover:bg-slate-100"
+            href="post">
             More
             <Image
               src="/arrow-right.svg"
@@ -27,7 +30,7 @@ export default function Home() {
               width={14}
               height={14}
             />
-          </p>
+          </Link>
         </section>
       </main>
     </>
