@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Search from '@/components/Search';
 
 const navigationItem = [
-  {name: '경험', path: '/experience'},
+  {name: '개발', path: '/dev'},
   {name: '회고', path: '/memoir'},
   {name: '학습', path: '/learning'},
   {name: '독서', path: '/book'},

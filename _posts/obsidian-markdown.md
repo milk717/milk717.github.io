@@ -2,7 +2,7 @@
 date: "2024-04-08"
 title: "어떻게 하면 마크다운 블로그에서 게시글을 편하게 작성할 수 있을까?"
 excerpt: "excerpt sdkfajfkljsklf"
-category: "블로그 만들기"
+category: "경험"
 tags:
   - "블로그"
   - "Gatsby"

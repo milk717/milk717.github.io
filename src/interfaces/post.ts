@@ -3,6 +3,7 @@ export type Post = {
   title: string;
   date: string;
   thumbnail: string;
+  category: string;
   tags: string[];
   excerpt: string;
   ogImage: {
