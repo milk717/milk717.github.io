@@ -2,6 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import {join} from 'path';
 import {Post} from '@/interfaces/post';
+import {DEV_LOG_CATEGORY_NAME} from '@/meta';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -41,15 +42,16 @@ export const getAllPostByTag = (tag?: string) => {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 };
 
-export const getPopularTags = (length: number = 4) => {
+export const getPopularTags = (length?: number) => {
   const slugs = getPostSlugs();
   const tagMap = new Map<string, number>();
 
   slugs.forEach(slug => {
     const post = getPostBySlug(slug);
-    post.tags.forEach(tag => {
-      tagMap.set(tag, (tagMap.get(tag) || 0) + 1);
-    });
+    post.category === DEV_LOG_CATEGORY_NAME &&
+      post.tags.forEach(tag => {
+        tagMap.set(tag, (tagMap.get(tag) || 0) + 1);
+      });
   });
 
   return Array.from(tagMap).slice(0, length);

@@ -2,9 +2,11 @@ import {getAllPostByCategory, getPopularTags} from '@/lib/api';
 import Card from '@/components/Card';
 import TagItem from '@/components/TagItem';
 import MoreButton from '@/components/MoreButton';
+import {DEV_LOG_CATEGORY_NAME} from '@/meta';
 
 const DevPage = () => {
-  const posts = getAllPostByCategory('경험');
+  const posts = getAllPostByCategory(DEV_LOG_CATEGORY_NAME);
+  const tags = getPopularTags(4);
 
   return (
     <main>
@@ -19,11 +21,11 @@ const DevPage = () => {
           Popular tags
         </h3>
         <div className="grid grid-cols-4 gap-2 mb-2">
-          {getPopularTags().map(([tagName, tagCnt]) => (
+          {tags.map(([tagName, tagCnt]) => (
             <TagItem key={tagName} tagName={tagName} tagCnt={tagCnt} />
           ))}
         </div>
-        <MoreButton text="More Tags" />
+        <MoreButton text="More Tags" href="/tags" />
       </section>
       <section>
         <h3 className="mb-2.5 text-xl font-bold text-neutral-800">

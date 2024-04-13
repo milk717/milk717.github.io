@@ -5,6 +5,8 @@ excerpt: 마크다운 요소를 테스트하기위한 더미데이터
 category: "temp"
 tags:
   - test
+  - test2
+  - test3
 thumbnail: "./images/img-1.png"
 ---
 # 마크다운 예시 글
