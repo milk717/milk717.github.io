@@ -2,7 +2,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import {join} from 'path';
 import {Post} from '@/interfaces/post';
-import {DEV_LOG_CATEGORY_NAME} from '@/meta';
+import {BOOK_LOG_CATEGORY_NAME, DEV_LOG_CATEGORY_NAME} from '@/meta';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
@@ -32,6 +32,18 @@ export const getAllPostByCategory = (category: string) => {
     .map(slug => getPostBySlug(slug))
     .filter(post => post.category === category)
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+};
+
+export const getAllRecommendedBookPost = () => {
+  const slugs = getPostSlugs();
+  return slugs
+    .map(slug => getPostBySlug(slug))
+    .filter(
+      post =>
+        post.category === BOOK_LOG_CATEGORY_NAME &&
+        post.rating &&
+        post.rating >= 4.5,
+    );
 };
 
 export const getAllPostByTag = (tag?: string) => {

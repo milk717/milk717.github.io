@@ -10,5 +10,5 @@ export type Post = {
     url: string;
   };
   content: string;
-  preview?: boolean;
+  rating?: number;
 };
