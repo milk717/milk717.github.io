@@ -3,20 +3,24 @@ import matter from 'gray-matter';
 import {join} from 'path';
 import {Post} from '@/interfaces/post';
 import {BOOK_LOG_CATEGORY_NAME, DEV_LOG_CATEGORY_NAME} from '@/meta';
+import {glob} from 'glob';
 
 const postsDirectory = join(process.cwd(), '_posts');
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory);
-}
+export const getPostSlugs = () => {
+  return glob.sync('**/*.md', {
+    cwd: postsDirectory,
+    ignore: '**/.obsidian/**/*',
+  });
+};
 
-export function getPostBySlug(slug: string) {
-  const realSlug = slug.replace(/\.md$/, '');
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
+export function getPostBySlug(slug: string | string[]) {
+  const slugs = Array.isArray(slug) ? slug : [slug];
+  const filePath = slugs.join('/');
+  const fullPath = join(postsDirectory, filePath);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const {data, content} = matter(fileContents);
-
-  return {...data, slug: realSlug, content} as Post;
+  return {...data, slug: filePath, content} as Post;
 }
 
 export function getAllPosts(): Post[] {

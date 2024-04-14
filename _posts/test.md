@@ -46,7 +46,6 @@ function example() {
 console.log("코드 블록 예시입니다.");
 }
 ```
-
 ## 링크(Links)
 
 [Google](https://www.google.com)

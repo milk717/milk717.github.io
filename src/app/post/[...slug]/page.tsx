@@ -42,11 +42,3 @@ export const generateMetadata = ({params}: Params): Metadata => {
     title,
   };
 };
-
-// export async function generateStaticParams() {
-//   const posts = getAllPosts();
-//
-//   return posts.map(post => ({
-//     slug: post.slug,
-//   }));
-// }

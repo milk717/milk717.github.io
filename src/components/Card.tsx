@@ -2,6 +2,7 @@ import React from 'react';
 import {Post} from '@/interfaces/post';
 import Image from 'next/image';
 import Link from 'next/link';
+import dayjs from 'dayjs';
 
 type CardProps = {
   post: Post;
@@ -18,17 +19,17 @@ const Card: React.FC<CardProps> = ({post}) => {
           src="https://www.milk717.com/static/8eecbbb84609a5a15f7af115014f5d14/36b38/img-1.webp"
           alt={`${post.title} 썸네일 이미지`}
         />
-        <div className="flex flex-col justify-between flex-1">
-          <div className="flex flex-col gap-y-1">
+        <div className="flex flex-col gap-y-2 justify-between flex-1">
+          <div className="flex flex-col gap-y-2">
             <p className="font-semibold">{post.title}</p>
-            <p className="text-sm text-gray-500">{post.excerpt}</p>
+            <p className="text-xs text-gray-500">{post.excerpt}</p>
           </div>
           <div className="flex items-center justify-between gap-x-2">
             <p className="flex gap-2 text-xs text-neutral-400">
               {post.tags.map(tag => `#${tag} `)}
             </p>
             <p className="text-xs text-neutral-400 flex-shrink-0">
-              {post.date}
+              {dayjs(post.date).format('YY.MM.DD')}
             </p>
           </div>
         </div>
