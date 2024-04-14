@@ -28,7 +28,7 @@ const Card: React.FC<CardProps> = ({post}) => {
         </div>
         <div className="flex items-center justify-between gap-x-2">
           <p className="flex gap-2 text-xs text-neutral-400">
-            {post.tags.map(tag => `#${tag} `)}
+            {post.tags?.map(tag => `#${tag} `)}
           </p>
           <p className="text-xs text-neutral-400 flex-shrink-0">
             {dayjs(post.date).format('YY.MM.DD')}
