@@ -10,7 +10,7 @@ const postsDirectory = join(process.cwd(), '_posts');
 export const getPostSlugs = () => {
   return glob.sync('**/*.md', {
     cwd: postsDirectory,
-    ignore: '**/.obsidian/**/*',
+    ignore: ['**/.obsidian/**/*', '**/_template/**/*'],
   });
 };
 

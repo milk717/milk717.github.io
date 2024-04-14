@@ -1,13 +1,13 @@
 ---
-date: "2024-04-08"
-title: "test"
+date: 2024-04-08
+title: test
 excerpt: 마크다운 요소를 테스트하기위한 더미데이터
-category: "학습"
+category: 학습
 tags:
   - test
   - test2
   - test3
-thumbnail: "./images/img-1.png"
+thumbnail: https://i.imgur.com/gXuAAis.png
 ---
 # 마크다운 예시 글
 

@@ -15,6 +15,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'milk717.imgur.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'i.imgur.com',
+            },
         ],
     },
 };
