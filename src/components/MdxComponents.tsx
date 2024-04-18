@@ -1,5 +1,6 @@
 import React from 'react';
 import {MDXProvider} from '@mdx-js/react';
+import Callout from '@/components/Callout';
 
 const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
   h1: props => (
@@ -99,6 +100,7 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
       {props.children}
     </td>
   ),
+  blockquote: Callout
 };
 
 export default MdxComponents;
