@@ -100,7 +100,18 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
       {props.children}
     </td>
   ),
-  blockquote: ObsidianCallout,
+  blockquote: props => (
+    <ObsidianCallout
+      components={{
+        normal: props => (
+          <div className="border-l-4 border-l-indigo-200 ps-2">
+            {props.children}
+          </div>
+        ),
+      }}
+      {...props}
+    />
+  ),
 };
 
 export default MdxComponents;
