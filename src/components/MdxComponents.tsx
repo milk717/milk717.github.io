@@ -1,6 +1,6 @@
 import React from 'react';
 import {MDXProvider} from '@mdx-js/react';
-import Callout from '@/components/Callout';
+import {ObsidianCallout} from 'obsidian-callouts-markdown';
 
 const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
   h1: props => (
@@ -100,7 +100,7 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
       {props.children}
     </td>
   ),
-  blockquote: Callout
+  blockquote: ObsidianCallout,
 };
 
 export default MdxComponents;
