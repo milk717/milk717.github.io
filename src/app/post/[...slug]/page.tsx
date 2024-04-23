@@ -2,8 +2,10 @@ import {notFound} from 'next/navigation';
 import {getPostBySlug} from '@/lib/api';
 import {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
-import MdxComponents from '@/components/MdxComponents';
+import MdxComponents from '@/app/post/[...slug]/_components/MdxComponents';
 import remarkGfm from 'remark-gfm';
+import PostMetaArea from '@/app/post/[...slug]/_components/PostMetaArea';
+import React from 'react';
 
 type Params = {
   params: {
@@ -19,13 +21,16 @@ export default async function Post({params}: Params) {
   }
 
   return (
-    <article className="mx-auto max-w-screen-sm">
-      <MDXRemote
-        components={MdxComponents}
-        source={post.content}
-        options={{mdxOptions: {remarkPlugins: [remarkGfm]}}}
-      />
-    </article>
+    <>
+      <PostMetaArea post={post} />
+      <article className="mx-auto">
+        <MDXRemote
+          components={MdxComponents}
+          source={post.content}
+          options={{mdxOptions: {remarkPlugins: [remarkGfm]}}}
+        />
+      </article>
+    </>
   );
 }
 
