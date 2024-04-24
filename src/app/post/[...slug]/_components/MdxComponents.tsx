@@ -4,32 +4,44 @@ import {ObsidianCallout} from 'obsidian-callouts-markdown';
 
 const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
   h1: props => (
-    <h1 className="font-bold text-3xl text-gray-900 my-2" {...props}>
+    <h1
+      className="font-bold text-3xl text-gray-900 my-2 hover:after:content-['#'] after:mx-1 after:text-neutral-200"
+      {...props}>
       {props.children}
     </h1>
   ),
   h2: props => (
-    <h2 className="font-bold text-2xl text-gray-900 my-2" {...props}>
+    <h2
+      className="font-bold text-2xl text-gray-900 my-2 hover:after:content-['#'] after:mx-1 after:text-neutral-200"
+      {...props}>
       {props.children}
     </h2>
   ),
   h3: props => (
-    <h3 className="font-bold text-xl text-gray-900 my-1" {...props}>
+    <h3
+      className="font-bold text-xl text-gray-900 my-1 hover:after:content-['#'] after:mx-1 after:text-neutral-200"
+      {...props}>
       {props.children}
     </h3>
   ),
   h4: props => (
-    <h4 className="font-bold text-lg text-gray-900 my-0.5" {...props}>
+    <h4
+      className="font-bold text-lg text-gray-900 my-0.5 hover:after:content-['#'] after:mx-1 after:text-neutral-200"
+      {...props}>
       {props.children}
     </h4>
   ),
   h5: props => (
-    <h5 className="font-semibold text-base text-gray-700 mb-0.5" {...props}>
+    <h5
+      className="font-semibold text-base text-gray-700 mb-0.5 hover:after:content-['#'] after:mx-1 after:text-neutral-200"
+      {...props}>
       {props.children}
     </h5>
   ),
   h6: props => (
-    <h6 className="font-semibold text-base text-gray-600 mb-0.5" {...props}>
+    <h6
+      className="font-semibold text-base text-gray-600 mb-0.5 hover:after:content-['#'] after:mx-1 after:text-neutral-200"
+      {...props}>
       {props.children}
     </h6>
   ),
@@ -53,9 +65,14 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
       {props.children}
     </a>
   ),
+  pre: props => (
+    <pre className="p-3 rounded-lg" {...props}>
+      {props.children}
+    </pre>
+  ),
   code: props => (
     <code
-      className="text-sm font-medium leading-relaxed bg-gray-200 px-1 py-0.5 mx-0.5 rounded"
+      className="text-sm font-medium leading-relaxed px-1.5 py-1 mx-0.5 rounded"
       {...props}>
       {props.children}
     </code>

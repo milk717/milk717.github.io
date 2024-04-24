@@ -6,6 +6,9 @@ import MdxComponents from '@/app/post/[...slug]/_components/MdxComponents';
 import remarkGfm from 'remark-gfm';
 import PostMetaArea from '@/app/post/[...slug]/_components/PostMetaArea';
 import React from 'react';
+import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 type Params = {
   params: {
@@ -27,7 +30,24 @@ export default async function Post({params}: Params) {
         <MDXRemote
           components={MdxComponents}
           source={post.content}
-          options={{mdxOptions: {remarkPlugins: [remarkGfm]}}}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm],
+              rehypePlugins: [
+                rehypeSlug,
+                [rehypePrettyCode, {theme: 'one-dark-pro', defaultLang: 'ts'}],
+                [
+                  rehypeAutolinkHeadings,
+                  {
+                    properties: {
+                      className: ['anchor'],
+                    },
+                    behavior: 'wrap',
+                  },
+                ],
+              ],
+            },
+          }}
         />
       </article>
     </>
