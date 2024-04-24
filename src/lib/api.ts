@@ -70,5 +70,7 @@ export const getPopularTags = (length?: number) => {
       });
   });
 
-  return Array.from(tagMap).slice(0, length);
+  return Array.from(tagMap)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, length);
 };

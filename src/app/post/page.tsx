@@ -14,7 +14,7 @@ const Post: React.FC<PostProps> = ({searchParams: {tag}}) => {
   return (
     <main>
       <h2 className="mb-2.5 text-3xl font-bold text-neutral-800">
-        {`# ${tag}` ?? 'All Posts'}
+        {tag ? `# ${tag}` : 'All Posts'}
       </h2>
       <div className="flex flex-col gap-4">
         {allPosts.map(post => (
