@@ -13,9 +13,9 @@ const Card: React.FC<CardProps> = ({post}) => {
     <Link
       as={`/post/${post.slug}`}
       href="/post/[slug]"
-      className="flex gap-x-5 rounded-lg border p-4 bg-white cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
+      className="flex flex-col sm:flex-row gap-x-5 gap-y-4 rounded-lg border p-4 bg-white cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
       <Image
-        className="rounded aspect-square object-contain"
+        className="rounded aspect-auto sm:aspect-square sm:w-auto object-contain self-center sm:self-auto"
         width={128}
         height={128}
         src={post.thumbnail}

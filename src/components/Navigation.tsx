@@ -13,14 +13,14 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center justify-between pb-8">
-      <div className="flex items-center">
+    <nav className="flex flex-col sm:flex-row justify-between pb-8 gap-2">
+      <div className="flex items-center justify-between">
         <Link
           className="py-2 px-3 mr-2 rounded-lg font-bold text-xl hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50"
           href="/">
           🦄
         </Link>
-        <div className="hidden sm:block">
+        <div className="block sm:block">
           {navigationItem.map(({name, path}) => (
             <Link
               key={path}
