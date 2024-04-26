@@ -18,8 +18,8 @@ const PostMetaArea: React.FC<PostMetaAreaProps> = ({post}) => {
         </p>
       </Link>
       <h1 className="text-3xl font-bold my-6">{post.title}</h1>
-      <div className="flex justify-between">
-        <div className="flex gap-2">
+      <div className="flex justify-between gap-y-3 flex-col sm:flex-row">
+        <div className="flex gap-2 flex-wrap">
           {post.tags.map(tag => (
             <Link key={tag} href={`/post?tag=${tag}`}>
               <p className="bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 px-2 py-0.5 rounded text-sm text-indigo-800">

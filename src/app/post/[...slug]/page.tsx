@@ -35,8 +35,18 @@ export default async function Post({params}: Params) {
               remarkPlugins: [remarkGfm],
               rehypePlugins: [
                 rehypeSlug,
-                // @ts-ignore
-                [rehypePrettyCode, {theme: 'one-dark-pro', defaultLang: 'ts'}],
+                [
+                  // @ts-ignore
+                  rehypePrettyCode,
+                  {
+                    theme: 'one-dark-pro',
+                    defaultLang: {
+                      block: 'tsx',
+                      inline: 'plaintext',
+                    },
+                    keepBackground: false,
+                  },
+                ],
                 [
                   rehypeAutolinkHeadings,
                   {

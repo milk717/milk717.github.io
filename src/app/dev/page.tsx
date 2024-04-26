@@ -20,7 +20,7 @@ const DevPage = () => {
         <h3 className="mb-2.5 text-xl font-bold text-neutral-800">
           Popular tags
         </h3>
-        <div className="grid grid-cols-4 gap-2 mb-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
           {tags.map(([tagName, tagCnt]) => (
             <TagItem key={tagName} tagName={tagName} tagCnt={tagCnt} />
           ))}

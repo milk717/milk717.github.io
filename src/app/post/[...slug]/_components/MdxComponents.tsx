@@ -51,7 +51,9 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
     </p>
   ),
   span: props => (
-    <span className="text-base text-gray-800 leading-7" {...props}>
+    <span
+      className="text-base text-gray-800 leading-7 group-aria-[label=inline-code-block]:text-sm group-aria-[label=inline-code-block]:text-violet-800"
+      {...props}>
       {props.children}
     </span>
   ),
@@ -66,13 +68,17 @@ const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
     </a>
   ),
   pre: props => (
-    <pre className="p-3 rounded-lg" {...props}>
+    <pre
+      className="p-3 rounded-lg overflow-x-scroll bg-[#282c34] group"
+      aria-label="code-block"
+      {...props}>
       {props.children}
     </pre>
   ),
   code: props => (
     <code
-      className="text-sm font-medium leading-relaxed px-1.5 py-1 mx-0.5 rounded"
+      className="text-sm font-medium leading-relaxed px-1 py-0.5 mx-0.5 rounded bg-violet-50 border border-violet-300 group group-aria-[label=code-block]:bg-transparent group-aria-[label=code-block]:border-none"
+      aria-label="inline-code-block"
       {...props}>
       {props.children}
     </code>
