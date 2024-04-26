@@ -17,7 +17,7 @@ const PostMetaArea: React.FC<PostMetaAreaProps> = ({post}) => {
           📁 {post.category}
         </p>
       </Link>
-      <h1 className="text-3xl font-bold my-6">{post.title}</h1>
+      <h1 className="text-3xl font-bold text-neutral-800 my-6">{post.title}</h1>
       <div className="flex justify-between gap-y-3 flex-col sm:flex-row">
         <div className="flex gap-2 flex-wrap">
           {post.tags.map(tag => (
