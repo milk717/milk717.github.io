@@ -1,11 +1,9 @@
-import {getAllPosts} from '@/lib/api';
 import Card from '@/components/Card';
 import Profile from '@/components/Profile';
 import MoreButton from '@/components/MoreButton';
+import {allPosts} from '@/contentlayer/generated';
 
 export default function Home() {
-  const allPosts = getAllPosts();
-
   return (
     <>
       <main className="flex flex-col gap-y-8">
@@ -16,7 +14,7 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
             {allPosts.slice(0, 4).map(post => (
-              <Card key={post.slug} post={post} />
+              <Card key={post._id} post={post} />
             ))}
           </div>
           <MoreButton />

@@ -1,8 +1,8 @@
 import React from 'react';
-import {MDXProvider} from '@mdx-js/react';
 import {ObsidianCallout} from 'obsidian-callouts-markdown';
+import type {MDXComponents} from 'mdx/types';
 
-const MdxComponents: React.ComponentProps<typeof MDXProvider>['components'] = {
+const MdxComponents: MDXComponents = {
   h1: props => (
     <h1
       className="font-bold text-3xl text-neutral-800 my-4 hover:after:content-['#'] after:mx-1 after:text-neutral-200"

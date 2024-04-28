@@ -18,7 +18,7 @@ const Post: React.FC<PostProps> = ({searchParams: {tag}}) => {
       </h2>
       <div className="flex flex-col gap-4">
         {allPosts.map(post => (
-          <Card key={post.slug} post={post} />
+          <Card key={post._id} post={post} />
         ))}
       </div>
     </main>

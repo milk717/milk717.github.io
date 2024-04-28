@@ -1,6 +1,6 @@
-import {Post} from '@/interfaces/post';
 import React from 'react';
 import Image from 'next/image';
+import {Post} from '@/contentlayer/generated';
 
 type BookProps = {
   post: Post;

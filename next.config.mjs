@@ -1,6 +1,9 @@
+import {withContentlayer} from 'next-contentlayer'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+    swcMinify: true,
     images: {
         remotePatterns: [
             {
@@ -23,4 +26,4 @@ const nextConfig = {
     },
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);

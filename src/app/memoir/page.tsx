@@ -14,7 +14,7 @@ const MemoirPage = () => {
       <section>
         <div className="flex flex-col gap-4">
           {posts.map(post => (
-            <Card key={post.slug} post={post} />
+            <Card key={post._id} post={post} />
           ))}
         </div>
       </section>
