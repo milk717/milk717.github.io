@@ -1,8 +1,9 @@
 import React from 'react';
 import {ObsidianCallout} from 'obsidian-callouts-markdown';
 import type {MDXComponents} from 'mdx/types';
+import {useMDXComponent} from 'next-contentlayer/hooks';
 
-const MdxComponents: MDXComponents = {
+const components: MDXComponents = {
   h1: props => (
     <h1
       className="font-bold text-3xl text-neutral-800 my-4 hover:after:content-['#'] after:mx-1 after:text-neutral-200"
@@ -140,6 +141,11 @@ const MdxComponents: MDXComponents = {
       {...props}
     />
   ),
+};
+
+const MdxComponents = ({code}: {code: string}) => {
+  const MDX = useMDXComponent(code);
+  return <MDX components={components} />;
 };
 
 export default MdxComponents;
