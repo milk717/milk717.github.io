@@ -23,8 +23,8 @@ const Card: React.FC<CardProps> = ({post}) => {
       />
       <div className="flex flex-col gap-y-2 justify-between flex-1">
         <div className="flex flex-col gap-y-2">
-          <p className="font-semibold">{post.title}</p>
-          <p className="text-xs text-gray-500">{post.excerpt}</p>
+          <p className="font-semibold text-neutral-800">{post.title}</p>
+          <p className="text-xs text-neutral-500">{post.excerpt}</p>
         </div>
         <div className="flex items-center justify-between gap-x-2">
           <p className="flex gap-2 text-xs text-neutral-400">
