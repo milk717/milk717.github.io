@@ -20,7 +20,7 @@ const highlightKeyword = (text: string, keyword: string) => {
 };
 
 const Search = () => {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
   const [keyword, setKeyword] = useState('');
 
   const postList = getPostListByKeyword(keyword);

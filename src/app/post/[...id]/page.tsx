@@ -4,6 +4,7 @@ import {Metadata} from 'next';
 import PostMetaArea from '@/app/post/[...id]/_components/PostMetaArea';
 import React from 'react';
 import MdxComponents from '@/app/post/[...id]/_components/MdxComponents';
+import UtterancesComments from '@/components/UtterancesComments';
 
 type Params = {
   params: {
@@ -24,6 +25,7 @@ export default async function Post({params}: Params) {
       <article className="mx-auto">
         <MdxComponents code={post.body.code} />
       </article>
+      <UtterancesComments />
     </>
   );
 }
