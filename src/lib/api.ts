@@ -32,3 +32,14 @@ export const getPopularTags = (length?: number) => {
     .sort((a, b) => b[1] - a[1])
     .slice(0, length);
 };
+
+export const getPostListByKeyword = (keyword: string) => {
+  const regExp = new RegExp(keyword.replace('#', ''), 'i');
+  return allPosts.filter(
+    post =>
+      post.title.match(regExp) ||
+      post.tags.some(tag => tag.match(regExp)) ||
+      post.excerpt?.match(regExp) ||
+      post.date.match(regExp),
+  );
+};
