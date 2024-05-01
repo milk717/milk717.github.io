@@ -52,7 +52,7 @@ const Search = () => {
         onClose={toggleModal}
         className="fixed left-1/2 top-24">
         <div className="fixed inset-0 bg-black/30" aria-hidden="true" />
-        <Dialog.Panel className="flex flex-col relative w-[60vw] max-h-[70vh] overflow-y-scroll -translate-x-1/2 bg-neutral-50/95 rounded-lg">
+        <Dialog.Panel className="flex flex-col relative w-[90vw] sm:w-[500px] md:w-[600px] max-h-[70vh] overflow-y-scroll -translate-x-1/2 bg-neutral-50/95 rounded-lg">
           <Dialog.Title className="sticky top-0 bg-neutral-50">
             <input
               className="w-full bg-transparent p-4 rounded-t-lg text-neutral-600 outline-0 border-b"
@@ -68,7 +68,7 @@ const Search = () => {
                 as={`/post/${post._id}`}
                 href="/post/[slug]"
                 onClick={toggleModal}>
-                <div className="flex flex-col gap-y-2 py-2 px-4 cursor-pointer hover:bg-neutral-100">
+                <div className="flex flex-col gap-y-2 py-2 px-4 cursor-pointer hover:bg-black/5">
                   <p className="text-neutral-700">
                     {highlightKeyword(post.title, keyword)}
                   </p>
