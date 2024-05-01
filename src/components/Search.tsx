@@ -4,6 +4,21 @@ import {getPostListByKeyword} from '@/lib/api';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 
+const highlightKeyword = (text: string, keyword: string) => {
+  const regExp = new RegExp(`(${keyword})`, 'i');
+
+  return text
+    .split(regExp)
+    .filter(v => v)
+    .map((word, index) => (
+      <span
+        key={word + index}
+        className={`${word.match(regExp)?.at(0) ? 'bg-violet-100 py-1 rounded text-violet-800 ring-1 ring-violet-400' : ''}`}>
+        {word}
+      </span>
+    ));
+};
+
 const Search = () => {
   let [isOpen, setIsOpen] = useState(true);
   const [keyword, setKeyword] = useState('');
@@ -46,7 +61,7 @@ const Search = () => {
               onChange={handleKeywordChange}
             />
           </Dialog.Title>
-          <Dialog.Description className="flex flex-col gap-y-3">
+          <div className="flex flex-col gap-y-3">
             {postList.map(post => (
               <Link
                 key={post._id}
@@ -54,19 +69,27 @@ const Search = () => {
                 href="/post/[slug]"
                 onClick={toggleModal}>
                 <div className="flex flex-col gap-y-2 py-2 px-4 cursor-pointer hover:bg-neutral-100">
-                  <p className="text-neutral-700">{post.title}</p>
+                  <p className="text-neutral-700">
+                    {highlightKeyword(post.title, keyword)}
+                  </p>
                   <div className="flex justify-between">
                     <p className="text-xs text-neutral-400">
-                      {post.tags.map(tag => `#${tag} `)}
+                      {highlightKeyword(
+                        post.tags.map(tag => `#${tag}`).join(' '),
+                        keyword,
+                      )}
                     </p>
                     <p className="text-xs text-neutral-400">
-                      {dayjs(post.date).format('YY.MM.DD')}
+                      {highlightKeyword(
+                        dayjs(post.date).format('YYYY-MM-DD'),
+                        keyword,
+                      )}
                     </p>
                   </div>
                 </div>
               </Link>
             ))}
-          </Dialog.Description>
+          </div>
         </Dialog.Panel>
       </Dialog>
     </div>
