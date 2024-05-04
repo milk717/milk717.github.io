@@ -22,7 +22,7 @@ const BookPage = () => {
         {/*</div>*/}
         <div className="grid grid-cols-4 gap-4">
           {allBooks.map(book => (
-            <BookItem key={book._id} post={book} />
+            <BookItem key={book.slug} book={book} />
           ))}
         </div>
       </section>

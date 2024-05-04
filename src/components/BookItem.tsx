@@ -4,21 +4,21 @@ import {Book} from '@/contentlayer/generated';
 import Link from 'next/link';
 
 type BookProps = {
-  post: Book;
+  book: Book;
 };
 
-const BookItem: React.FC<BookProps> = ({post}) => {
+const BookItem: React.FC<BookProps> = ({book}) => {
   return (
-    <Link as={`/book/${post.slug}`} href="/book/[slug]">
+    <Link as={`/book/${book.slug}`} href="/book/[slug]">
       <div className="flex flex-col gap-y-2 rounded-lg border p-4 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
         <Image
           className="rounded"
           height={400}
           width={200}
-          src={post.cover_url}
-          alt={`${post.title} 썸네일 이미지`}
+          src={book.cover_url}
+          alt={`${book.title} 썸네일 이미지`}
         />
-        <p className="font-semibold">{post.title}</p>
+        <p className="font-semibold">{book.title}</p>
       </div>
     </Link>
   );
