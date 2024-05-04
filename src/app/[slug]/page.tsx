@@ -3,7 +3,7 @@ import {getPostBySlug} from '@/lib/postApi';
 import {Metadata} from 'next';
 import PostMetaArea from '@/app/[slug]/_components/PostMetaArea';
 import React from 'react';
-import MdxComponents from '@/app/[slug]/_components/MdxComponents';
+import MdxComponents from '@/components/MdxComponents';
 import UtterancesComments from '@/components/UtterancesComments';
 
 type Params = {
