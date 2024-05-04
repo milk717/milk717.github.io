@@ -10,7 +10,7 @@ type BookProps = {
 const BookItem: React.FC<BookProps> = ({book}) => {
   return (
     <Link as={`/book/${book.slug}`} href="/book/[slug]">
-      <div className="flex flex-col gap-y-2 rounded-lg border p-4 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
+      <div className="flex flex-col items-center gap-y-2 rounded-lg border p-4 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
         <Image
           className="rounded"
           height={400}
