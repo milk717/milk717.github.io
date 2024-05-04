@@ -141,6 +141,7 @@ const components: MDXComponents = {
       {...props}
     />
   ),
+  img: props => <img {...props} className="my-4" />,
 };
 
 const MdxComponents = ({code}: {code: string}) => {

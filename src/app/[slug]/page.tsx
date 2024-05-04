@@ -15,8 +15,6 @@ type Params = {
 export default async function Post({params}: Params) {
   const post = getPostBySlug(params.slug);
 
-  console.log(post);
-
   if (!post) {
     return notFound();
   }
