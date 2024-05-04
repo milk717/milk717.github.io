@@ -1,7 +1,7 @@
 import Card from '@/components/Card';
 import Profile from '@/components/Profile';
 import MoreButton from '@/components/MoreButton';
-import {allPosts} from '@/contentlayer/generated';
+import {getAllPostByTag} from '@/lib/api';
 
 export default function Home() {
   return (
@@ -13,9 +13,11 @@ export default function Home() {
             Recent Posts
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
-            {allPosts.slice(0, 4).map(post => (
-              <Card key={post._id} post={post} />
-            ))}
+            {getAllPostByTag()
+              .slice(0, 4)
+              .map(post => (
+                <Card key={post._id} post={post} />
+              ))}
           </div>
           <MoreButton />
         </section>
