@@ -1,7 +1,7 @@
 import Card from '@/components/Card';
 import Profile from '@/components/Profile';
 import MoreButton from '@/components/MoreButton';
-import {getAllPostByTag} from '@/lib/api';
+import {getAllPostByTag} from '@/lib/postApi';
 
 export default function Home() {
   return (

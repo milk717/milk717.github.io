@@ -1,6 +1,6 @@
 import {ChangeEventHandler, useState} from 'react';
 import {Dialog} from '@headlessui/react';
-import {getPostListByKeyword} from '@/lib/api';
+import {getPostListByKeyword} from '@/lib/postApi';
 import dayjs from 'dayjs';
 import Link from 'next/link';
 

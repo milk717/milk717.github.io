@@ -1,4 +1,4 @@
-import {getAllPostByCategory} from '@/lib/api';
+import {getAllPostByCategory} from '@/lib/postApi';
 import {MEMOIR_LOG_CATEGORY_NAME} from '@/meta';
 import Card from '@/components/Card';
 

@@ -1,4 +1,4 @@
-import {getAllPostByCategory, getPopularTags} from '@/lib/api';
+import {getAllPostByCategory, getPopularTags} from '@/lib/postApi';
 import Card from '@/components/Card';
 import TagItem from '@/components/TagItem';
 import MoreButton from '@/components/MoreButton';

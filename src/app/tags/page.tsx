@@ -1,4 +1,4 @@
-import {getPopularTags} from '@/lib/api';
+import {getPopularTags} from '@/lib/postApi';
 import Link from 'next/link';
 
 const TagPage = () => {

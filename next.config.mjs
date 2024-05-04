@@ -1,4 +1,4 @@
-import {withContentlayer} from 'next-contentlayer'
+import {withContentlayer} from 'next-contentlayer';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -22,6 +22,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'i.imgur.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'image.yes24.com'
+            }
         ],
     },
 };

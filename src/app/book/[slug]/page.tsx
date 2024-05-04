@@ -1,10 +1,10 @@
 import {notFound} from 'next/navigation';
-import {getPostBySlug} from '@/lib/postApi';
 import {Metadata} from 'next';
-import PostMetaArea from '@/app/[slug]/_components/PostMetaArea';
 import React from 'react';
 import MdxComponents from '@/app/[slug]/_components/MdxComponents';
 import UtterancesComments from '@/components/UtterancesComments';
+import {getBookBySlug} from '@/lib/bookApi';
+import BookMetaArea from '@/app/book/[slug]/_components/BookMetaArea';
 
 type Params = {
   params: {
@@ -13,26 +13,24 @@ type Params = {
 };
 
 export default async function Post({params}: Params) {
-  const post = getPostBySlug(params.slug);
+  const book = getBookBySlug(params.slug);
 
-  console.log(post);
-
-  if (!post) {
+  if (!book) {
     return notFound();
   }
 
   return (
     <>
-      <PostMetaArea post={post} />
+      <BookMetaArea book={book} />
       <article className="mx-auto">
-        <MdxComponents code={post.body.code} />
+        <MdxComponents code={book.body.code} />
       </article>
       <UtterancesComments />
     </>
   );
 }
 export const generateMetadata = ({params}: Params): Metadata => {
-  const post = getPostBySlug(params.slug);
+  const post = getBookBySlug(params.slug);
 
   if (!post) {
     return notFound();

@@ -1,4 +1,4 @@
-import {getAllPostByTag} from '@/lib/api';
+import {getAllPostByTag} from '@/lib/postApi';
 import Card from '@/components/Card';
 import React from 'react';
 

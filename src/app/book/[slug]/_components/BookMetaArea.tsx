@@ -2,27 +2,27 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import {CATEGORY_PATH_MAP} from '@/utils/constants';
 import {isValidCategory} from '@/utils/typeGuards';
-import {Post} from '@/contentlayer/generated';
+import {Book} from '@/contentlayer/generated';
 
 type PostMetaAreaProps = {
-  post: Post;
+  book: Book;
 };
 
-const PostMetaArea: React.FC<PostMetaAreaProps> = ({post}) => {
+const BookMetaArea: React.FC<PostMetaAreaProps> = ({book}) => {
   return (
     <section className="mb-8">
       <Link
-        href={`/${isValidCategory(post.category) ? CATEGORY_PATH_MAP[post.category].path : 'dev'}`}
+        href={`/${isValidCategory(book.category) ? CATEGORY_PATH_MAP[book.category].path : 'dev'}`}
         className="w-fit">
         <p className="px-3 py-2 rounded bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 text-sm w-fit text-neutral-700 cursor-pointer">
-          📁 {post.category}
+          📁 {book.category}
         </p>
       </Link>
-      <h1 className="text-3xl font-bold text-neutral-800 my-6">{post.title}</h1>
+      <h1 className="text-3xl font-bold text-neutral-800 my-6">{book.title}</h1>
       <div className="flex justify-between gap-y-3 flex-col sm:flex-row">
         <div className="flex gap-2 flex-wrap">
-          {post.tags.map(tag => (
-            <Link key={tag} href={`/post?tag=${tag}`}>
+          {book.tags.map(tag => (
+            <Link key={tag} href={`/book?tag=${tag}`}>
               <p className="bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50 px-2 py-0.5 rounded text-sm text-indigo-800">
                 # {tag}
               </p>
@@ -30,7 +30,7 @@ const PostMetaArea: React.FC<PostMetaAreaProps> = ({post}) => {
           ))}
         </div>
         <p className="text-neutral-600 text-sm">
-          {dayjs(post.date).format('YYYY-MM-DD')}
+          {dayjs(book.created).format('YYYY-MM-DD')}
         </p>
       </div>
       <hr className="mt-8" />
@@ -38,4 +38,4 @@ const PostMetaArea: React.FC<PostMetaAreaProps> = ({post}) => {
   );
 };
 
-export default PostMetaArea;
+export default BookMetaArea;
