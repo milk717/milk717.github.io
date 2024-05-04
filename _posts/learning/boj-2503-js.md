@@ -7,6 +7,7 @@ tags:
   - Algorithm
   - BOJ
 thumbnail: https://i.imgur.com/PIqR60k.png
+slug: boj-2503
 ---
 [2503번: 숫자 야구](https://www.acmicpc.net/problem/2503)
 

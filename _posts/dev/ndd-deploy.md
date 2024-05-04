@@ -9,6 +9,7 @@ tags:
   - 곰터뷰
   - 네이버-부스트캠프
 thumbnail: https://i.imgur.com/vTLB9Nf.png
+slug: gomterview-1
 ---
 결과적으로 우리 NDD 팀은 Cloudflare를 사용해서 React 페이지를 배포하게 되었습니다.
 이 글은 왜 수많은 선택지중에 Cloudflare를 사용해서 배포하게 되었는지에 대한 과정이 담겨있습니다.

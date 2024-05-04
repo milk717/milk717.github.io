@@ -7,6 +7,7 @@ tags:
   - Algorithm
   - 프로그래머스
 thumbnail: https://i.imgur.com/dCcyBTB.png
+slug: algorithm-js-cnt-k
 ---
 
 # 문제 살펴보기

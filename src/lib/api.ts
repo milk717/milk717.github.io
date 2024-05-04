@@ -1,8 +1,8 @@
 import {DEV_LOG_CATEGORY_NAME} from '@/meta';
 import {allPosts} from '@/contentlayer/generated';
 
-export const getPostById = (id: string[]) => {
-  return allPosts.find(post => post._id === id.join('/'));
+export const getPostBySlug = (slug: string) => {
+  return allPosts.find(post => post.slug === slug);
 };
 
 export const getAllPostByCategory = (category: string) => {

@@ -9,6 +9,7 @@ tags:
   - NDD
   - 프로젝트
 thumbnail: https://i.imgur.com/nmHAxNB.png
+slug: gomterview-6
 ---
 # 서론
 곰터뷰 프로젝트를 [the-NDD](https://github.com/the-NDD) organization으로 이전하게 되면서 기존 Webpack을 사용하던 프로젝트를 Vite로 마이그레이션했습니다.

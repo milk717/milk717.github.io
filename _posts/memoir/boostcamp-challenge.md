@@ -7,6 +7,7 @@ tags:
   - 네이버-부스트캠프
   - 회고
 thumbnail: https://i.imgur.com/HbIHZss.png
+slug: boostcamp-challenge
 ---
 ![](https://i.imgur.com/HbIHZss.png)
 

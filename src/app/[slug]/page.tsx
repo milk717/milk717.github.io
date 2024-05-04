@@ -1,19 +1,21 @@
 import {notFound} from 'next/navigation';
-import {getPostById} from '@/lib/api';
+import {getPostBySlug} from '@/lib/api';
 import {Metadata} from 'next';
-import PostMetaArea from '@/app/post/[...id]/_components/PostMetaArea';
+import PostMetaArea from '@/app/[slug]/_components/PostMetaArea';
 import React from 'react';
-import MdxComponents from '@/app/post/[...id]/_components/MdxComponents';
+import MdxComponents from '@/app/[slug]/_components/MdxComponents';
 import UtterancesComments from '@/components/UtterancesComments';
 
 type Params = {
   params: {
-    id: string[];
+    slug: string;
   };
 };
 
 export default async function Post({params}: Params) {
-  const post = getPostById(params.id);
+  const post = getPostBySlug(params.slug);
+
+  console.log(post);
 
   if (!post) {
     return notFound();
@@ -30,7 +32,7 @@ export default async function Post({params}: Params) {
   );
 }
 export const generateMetadata = ({params}: Params): Metadata => {
-  const post = getPostById(params.id);
+  const post = getPostBySlug(params.slug);
 
   if (!post) {
     return notFound();

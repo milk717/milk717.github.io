@@ -8,6 +8,7 @@ tags:
   - test2
   - test3
 thumbnail: https://i.imgur.com/gXuAAis.png
+slug: test
 ---
 # 마크다운 예시 글
 

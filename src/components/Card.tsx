@@ -11,8 +11,8 @@ type CardProps = {
 const Card: React.FC<CardProps> = ({post}) => {
   return (
     <Link
-      as={`/post/${post._id}`}
-      href="/post/[slug]"
+      as={`/${post.slug}`}
+      href="/[slug]"
       className="flex flex-col sm:flex-row gap-x-5 gap-y-4 rounded-lg border p-4 bg-white cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
       <Image
         className="rounded aspect-auto sm:aspect-square sm:w-auto object-contain self-center sm:self-auto"

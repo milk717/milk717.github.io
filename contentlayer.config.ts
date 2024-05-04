@@ -35,6 +35,16 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       required: false,
     },
+    slug: {
+      type: 'string',
+      required: true,
+    },
+  },
+  computedFields: {
+    url: {
+      type: 'string',
+      resolve: doc => `${doc.slug}/`,
+    },
   },
 }));
 

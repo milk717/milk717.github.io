@@ -7,6 +7,7 @@ tags:
   - Algorithm
   - BOJ
 thumbnail: https://i.imgur.com/PIqR60k.png
+slug: boj-1138
 ---
 [1138 한 줄로 서기](https://www.acmicpc.net/problem/1138)
 # 문제 설명

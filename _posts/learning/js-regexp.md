@@ -7,6 +7,7 @@ tags:
   - Javascript
   - 정규표현식
 thumbnail: https://i.imgur.com/npl1lee.png
+slug: js-regexp
 ---
 # 정규표현식 Tips
 
