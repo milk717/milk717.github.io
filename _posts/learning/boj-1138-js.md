@@ -8,6 +8,7 @@ tags:
   - BOJ
 thumbnail: https://i.imgur.com/PIqR60k.png
 slug: boj-1138
+updated: 2024-05-05T16:58
 ---
 [1138 한 줄로 서기](https://www.acmicpc.net/problem/1138)
 # 문제 설명

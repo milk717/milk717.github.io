@@ -8,6 +8,7 @@ tags:
   - 졸업작품
 thumbnail: https://i.imgur.com/UwMoiZP.png
 slug: bixby-capsule1
+updated: 2024-05-05T16:58
 ---
 # ❓ 빅스비 캡슐을 사용하게 된 이유
 ## google assistant api 서비스 종료라니??

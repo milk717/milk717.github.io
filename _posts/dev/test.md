@@ -9,6 +9,7 @@ tags:
   - test3
 thumbnail: https://i.imgur.com/gXuAAis.png
 slug: test
+updated: 2024-05-05T16:58
 ---
 # 마크다운 예시 글
 

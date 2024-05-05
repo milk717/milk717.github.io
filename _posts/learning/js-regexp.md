@@ -8,6 +8,7 @@ tags:
   - 정규표현식
 thumbnail: https://i.imgur.com/npl1lee.png
 slug: js-regexp
+updated: 2024-05-05T16:58
 ---
 # 정규표현식 Tips
 

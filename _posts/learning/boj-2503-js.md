@@ -8,6 +8,7 @@ tags:
   - BOJ
 thumbnail: https://i.imgur.com/PIqR60k.png
 slug: boj-2503
+updated: 2024-05-05T16:58
 ---
 [2503번: 숫자 야구](https://www.acmicpc.net/problem/2503)
 

@@ -8,6 +8,7 @@ tags:
   - 프로그래머스
 thumbnail: https://i.imgur.com/dCcyBTB.png
 slug: algorithm-js-cnt-k
+updated: 2024-05-05T16:58
 ---
 
 # 문제 살펴보기

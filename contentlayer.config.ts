@@ -63,6 +63,10 @@ export const Book = defineDocumentType(() => ({
       type: 'string',
       required: true,
     },
+    updated: {
+      type: 'date',
+      required: true,
+    },
   },
   computedFields: {
     url: {
@@ -104,6 +108,10 @@ export const Post = defineDocumentType(() => ({
     },
     slug: {
       type: 'string',
+      required: true,
+    },
+    updated: {
+      type: 'date',
       required: true,
     },
   },

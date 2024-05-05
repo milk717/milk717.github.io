@@ -8,6 +8,7 @@ tags:
   - 회고
 thumbnail: https://i.imgur.com/HbIHZss.png
 slug: boostcamp-challenge
+updated: 2024-05-05T16:58
 ---
 ![](https://i.imgur.com/HbIHZss.png)
 

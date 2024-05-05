@@ -8,6 +8,7 @@ tags:
   - 프로그래머스
 thumbnail: https://i.imgur.com/dCcyBTB.png
 slug: algorithm-js-triangle2
+updated: 2024-05-05T16:58
 ---
 # 삼각형의 완성조건 (2) 문제
 ## 문제 링크

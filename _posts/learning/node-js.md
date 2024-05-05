@@ -8,6 +8,7 @@ tags:
   - Nodejs
 thumbnail: https://i.imgur.com/oaFSGxe.png
 slug: nodejs-work
+updated: 2024-05-05T16:58
 ---
 # Node.js의 등장
 Node.js는 자바스크립트 런타임입니다. Node.js가 등장하기 전에는 자바스크립트는 브라우저 환경에서만 구동될 수 있었지만 Node.js의 등장 이후 자바스크립트를 컴퓨터에서 실행할 수 있게 되었습니다.
