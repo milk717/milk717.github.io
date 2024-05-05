@@ -5,7 +5,6 @@ import MdxComponents from '@/components/MdxComponents';
 import UtterancesComments from '@/components/UtterancesComments';
 import {getBookBySlug} from '@/lib/bookApi';
 import BookMetaArea from '@/app/book/[slug]/_components/BookMetaArea';
-import {getPostBySlug} from '@/lib/postApi';
 import BlogInfo from '@/BlogInfo.json';
 
 type Params = {
@@ -32,23 +31,21 @@ export default async function Post({params}: Params) {
   );
 }
 export const generateMetadata = ({params}: Params): Metadata => {
-  const post = getPostBySlug(params.slug);
+  const book = getBookBySlug(params.slug);
 
-  if (!post) {
+  if (!book) {
     return notFound();
   }
 
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: book.title,
     authors: {name: BlogInfo.profile.name, url: BlogInfo.profile.link.github},
-    keywords: post.tags,
-    category: post.category,
+    keywords: book.tags,
+    category: book.category,
     openGraph: {
       type: 'article',
-      title: post.title,
-      images: [{url: post.thumbnail}],
-      description: post.excerpt,
+      title: book.title,
+      images: [{url: book.cover_url}],
       locale: 'ko',
     },
   };
