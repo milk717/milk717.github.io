@@ -5,6 +5,7 @@ import PostMetaArea from '@/app/[slug]/_components/PostMetaArea';
 import React from 'react';
 import MdxComponents from '@/components/MdxComponents';
 import UtterancesComments from '@/components/UtterancesComments';
+import BlogInfo from '@/BlogInfo.json';
 
 type Params = {
   params: {
@@ -36,9 +37,18 @@ export const generateMetadata = ({params}: Params): Metadata => {
     return notFound();
   }
 
-  const title = `${post.title}`;
-
   return {
-    title,
+    title: post.title,
+    description: post.excerpt,
+    authors: {name: BlogInfo.profile.name, url: BlogInfo.profile.link.github},
+    keywords: post.tags,
+    category: post.category,
+    openGraph: {
+      type: 'article',
+      title: post.title,
+      images: [{url: post.thumbnail}],
+      description: post.excerpt,
+      locale: 'ko',
+    },
   };
 };
