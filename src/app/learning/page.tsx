@@ -1,6 +1,6 @@
 import Card from '@/components/Card';
 import {getAllPostByCategory} from '@/lib/postApi';
-import {STUDY_LOG_CATEGORY_NAME} from '@/meta';
+import {STUDY_LOG_CATEGORY_NAME} from '@/utils/constants';
 
 const LearningPage = () => {
   const posts = getAllPostByCategory(STUDY_LOG_CATEGORY_NAME);

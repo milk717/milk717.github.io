@@ -1,10 +1,12 @@
+const BlogInfo = require('./src/BlogInfo.json');
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'http://localhost:3000',
+  siteUrl: BlogInfo.siteUrl,
   generateRobotsTxt: true,
   changefreq: 'daily',
   exclude: ['/server-sitemap.xml'],
   robotsTxtOptions: {
-    additionalSitemaps: ['https://localhost:3000/server-sitemap.xml'],
+    additionalSitemaps: [`${BlogInfo.siteUrl}/server-sitemap.xml`],
   },
 };

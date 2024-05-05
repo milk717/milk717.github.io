@@ -1,6 +1,6 @@
 import {getAllPostByCategory} from '@/lib/postApi';
-import {MEMOIR_LOG_CATEGORY_NAME} from '@/meta';
 import Card from '@/components/Card';
+import {MEMOIR_LOG_CATEGORY_NAME} from '@/utils/constants';
 
 const MemoirPage = () => {
   const posts = getAllPostByCategory(MEMOIR_LOG_CATEGORY_NAME);

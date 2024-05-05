@@ -1,9 +1,9 @@
-import {
-  BOOK_LOG_CATEGORY_NAME,
-  DEV_LOG_CATEGORY_NAME,
-  MEMOIR_LOG_CATEGORY_NAME,
-  STUDY_LOG_CATEGORY_NAME,
-} from '@/meta';
+import BlogInfo from '@/BlogInfo.json';
+
+export const DEV_LOG_CATEGORY_NAME = BlogInfo.category.dev;
+export const MEMOIR_LOG_CATEGORY_NAME = BlogInfo.category.memoir;
+export const STUDY_LOG_CATEGORY_NAME = BlogInfo.category.learning;
+export const BOOK_LOG_CATEGORY_NAME = BlogInfo.category.book;
 
 export const CATEGORY_PATH_MAP = {
   [DEV_LOG_CATEGORY_NAME]: {

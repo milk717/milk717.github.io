@@ -1,15 +1,15 @@
 import {getServerSideSitemap} from 'next-sitemap';
 import {allBooks, allPosts} from '@/contentlayer/generated';
-import {BLOG} from '@/meta';
+import BlogInfo from '@/BlogInfo.json';
 
 export async function GET() {
   const bookSitemap = allBooks.map(book => ({
-    loc: `${BLOG.SITE_URL}/${book.slug}`,
+    loc: `${BlogInfo.siteUrl}/${book.slug}`,
     lastmod: book.updated,
     priority: 0.7,
   }));
   const postSitemap = allPosts.map(post => ({
-    loc: `${BLOG.SITE_URL}/${post.slug}`,
+    loc: `${BlogInfo.siteUrl}/${post.slug}`,
     lastmod: post.updated,
     priority: 1,
   }));

@@ -2,7 +2,7 @@ import {getAllPostByCategory, getPopularTags} from '@/lib/postApi';
 import Card from '@/components/Card';
 import TagItem from '@/components/TagItem';
 import MoreButton from '@/components/MoreButton';
-import {DEV_LOG_CATEGORY_NAME} from '@/meta';
+import {DEV_LOG_CATEGORY_NAME} from '@/utils/constants';
 
 const DevPage = () => {
   const posts = getAllPostByCategory(DEV_LOG_CATEGORY_NAME);

@@ -1,5 +1,5 @@
-import {DEV_LOG_CATEGORY_NAME} from '@/meta';
 import {allPosts} from '@/contentlayer/generated';
+import {DEV_LOG_CATEGORY_NAME} from '@/utils/constants';
 
 export const getPostBySlug = (slug: string) => {
   return allPosts.find(post => post.slug === slug);
