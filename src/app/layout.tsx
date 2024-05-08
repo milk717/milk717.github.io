@@ -1,10 +1,8 @@
 import type {Metadata} from 'next';
-import {Inter} from 'next/font/google';
 import './globals.css';
 import {PropsWithChildren} from 'react';
 import Navigation from '@/components/Navigation';
-
-const inter = Inter({subsets: ['latin']});
+import {GoogleAnalytics} from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: 'Milk717 Blog',
@@ -18,6 +16,7 @@ const RootLayout: React.FC<PropsWithChildren> = ({children}) => {
         <Navigation />
         {children}
       </body>
+      <GoogleAnalytics gaId="G-K4QSH24CR7" />
     </html>
   );
 };
