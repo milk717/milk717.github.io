@@ -16,5 +16,12 @@
     "memoir": "회고",
     "learning": "학습",
     "book": "독서"
+  },
+  "tagImages": {
+    "프로젝트": "",
+    "곰터뷰": "https://i.imgur.com/LJDSrWl.png",
+    "네이버-부스트캠프": "https://i.imgur.com/BimYjwU.png",
+    "Bixby": "https://i.imgur.com/UwMoiZP.png",
+    "Gatsby": "https://i.imgur.com/QAt5e8A.png"
   }
 }

@@ -6,8 +6,6 @@ category: 개발
 tags:
   - 곰터뷰
   - 네이버-부스트캠프
-  - 프로젝트
-  - NDD
 thumbnail: https://i.imgur.com/bsrkSA8.png
 slug: gomterview-4
 updated: 2024-05-05T16:58

@@ -4,9 +4,7 @@ title: Oauth2를 도입하신다고요? 꼭 쿠키 사용하세요 ^^
 excerpt: Oauth2에서 쿠키로 토큰을 관리할 때 발생하는 문제점과 이에 대한 해결방안을 기록했습니다.
 category: 개발
 tags:
-  - 프로젝트
   - 네이버-부스트캠프
-  - NDD
   - 곰터뷰
 thumbnail: https://i.imgur.com/XQMsdl8.png
 slug: gomterview-2

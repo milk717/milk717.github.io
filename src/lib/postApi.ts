@@ -29,7 +29,12 @@ export const getPopularTags = (length?: number) => {
   );
 
   return Array.from(tagMap)
-    .sort((a, b) => b[1] - a[1])
+    .sort((a, b) => {
+      if (b[1] === a[1]) {
+        return b[0] < a[0] ? 1 : -1;
+      }
+      return b[1] - a[1];
+    })
     .slice(0, length);
 };
 

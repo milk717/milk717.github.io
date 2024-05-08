@@ -1,20 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import BlogInfo from '@/BlogInfo.json';
 
 type TagItemProps = {
   tagName: string;
   tagCnt: number;
 };
+
+//FIXME 타입 고치기
 const TagItem: React.FC<TagItemProps> = ({tagName, tagCnt}) => {
   return (
     <Link
       key={tagName}
       href={`/post?tag=${tagName}`}
-      className="flex flex-col items-center rounded-lg bg-white border cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
+      className="flex flex-col items-center gap-y-2 rounded-lg bg-white border py-2 cursor-pointer hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50">
       <Image
         className="object-cover"
-        src="https://www.milk717.com/static/8eecbbb84609a5a15f7af115014f5d14/36b38/img-1.webp"
-        alt="깃허브 프로필 이미지"
+        // @ts-ignore
+        src={BlogInfo.tagImages[tagName]}
+        alt={`${tagName}의 썸네일`}
         width={80}
         height={100}
       />

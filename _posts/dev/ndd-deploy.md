@@ -4,8 +4,6 @@ title: "[부스트캠프/NDD] 곰터뷰는 왜 Cloudflare를 사용해서 배포
 category: 개발
 excerpt: Docker, AWS S3, Cloudflare를 사용해서 React 웹사이트를 배포해본 후 Cloudflare을 선택하게된 과정을 담고 있는 글입니다.
 tags:
-  - 프로젝트
-  - NDD
   - 곰터뷰
   - 네이버-부스트캠프
 thumbnail: https://i.imgur.com/vTLB9Nf.png
