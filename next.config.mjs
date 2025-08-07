@@ -38,7 +38,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'www.milk717.com',
+                hostname: 'www.milk717.me',
             },
             {
                 protocol: 'https',
