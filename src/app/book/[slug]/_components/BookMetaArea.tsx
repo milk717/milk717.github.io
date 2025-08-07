@@ -1,8 +1,7 @@
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import {Book} from '@/contentlayer/generated';
+import type { Book } from '@/contentlayer/generated';
 import Image from 'next/image';
-import React from 'react';
 
 type PostMetaAreaProps = {
   book: Book;

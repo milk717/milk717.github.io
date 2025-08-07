@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Search from '@/components/Search';
-import {usePathname} from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const navigationItem = [
   {name: '개발', icon: '💻', path: '/dev'},
@@ -26,8 +26,8 @@ const Navigation = () => {
               key={path}
               className={`py-3 px-6 rounded-lg text-neutral-800 hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50 ${pathname === path ? 'font-semibold text-neutral-950' : 'font-normal'}`}
               href={path}>
-              <span className={`inline sm:hidden`}>{icon}</span>
-              <span className={`hidden sm:inline`}>{name}</span>
+              <span className="inline sm:hidden">{icon}</span>
+              <span className="hidden sm:inline">{name}</span>
             </Link>
           ))}
         </div>

@@ -1,7 +1,6 @@
-import React from 'react';
-import {ObsidianCallout} from 'obsidian-callouts-markdown';
-import type {MDXComponents} from 'mdx/types';
-import {useMDXComponent} from 'next-contentlayer/hooks';
+import { ObsidianCallout } from 'obsidian-callouts-markdown';
+import type { MDXComponents } from 'mdx/types';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 
 const components: MDXComponents = {
   h1: props => (
@@ -141,7 +140,7 @@ const components: MDXComponents = {
       {...props}
     />
   ),
-  img: props => <img {...props} className="my-4" />,
+  img: props => <img {...props} className="my-4" alt={props.alt} />,
 };
 
 const MdxComponents = ({code}: {code: string}) => {

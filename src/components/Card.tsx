@@ -1,8 +1,7 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import dayjs from 'dayjs';
-import {Post} from '@/contentlayer/generated';
+import type { Post } from '@/contentlayer/generated';
 
 type CardProps = {
   post: Post;

@@ -1,8 +1,8 @@
-import type {Metadata} from 'next';
+import type { Metadata } from 'next';
 import './globals.css';
-import {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
 import Navigation from '@/components/Navigation';
-import {GoogleAnalytics} from '@next/third-parties/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata: Metadata = {
   title: 'Milk717 Blog',

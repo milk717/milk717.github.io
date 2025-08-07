@@ -1,6 +1,5 @@
-import React from 'react';
 import Image from 'next/image';
-import {Book} from '@/contentlayer/generated';
+import type { Book } from '@/contentlayer/generated';
 import Link from 'next/link';
 
 type BookProps = {

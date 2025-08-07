@@ -1,6 +1,6 @@
 'use client';
 
-import {createRef, memo, useLayoutEffect} from 'react';
+import { createRef, memo, useLayoutEffect } from 'react';
 
 const UtterancesComments: React.FC = memo(function Comments() {
   const containerRef = createRef<HTMLDivElement>();
@@ -17,12 +17,12 @@ const UtterancesComments: React.FC = memo(function Comments() {
       async: 'true',
     };
 
-    Object.entries(attributes).forEach(([key, value]) => {
-      utterances.setAttribute(key, value);
-    });
+    for (const [key, value] of Object.entries(attributes)) {
+      utterances.setAttribute(key, value as string);
+    }
 
     containerRef.current?.replaceChildren(utterances);
-  }, []);
+  }, [containerRef]);
 
   return <section id="utterance-comments" ref={containerRef} />;
 });

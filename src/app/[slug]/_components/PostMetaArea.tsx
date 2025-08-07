@@ -1,8 +1,8 @@
 import dayjs from 'dayjs';
 import Link from 'next/link';
-import {CATEGORY_PATH_MAP} from '@/utils/constants';
-import {isValidCategory} from '@/utils/typeGuards';
-import {Post} from '@/contentlayer/generated';
+import { CATEGORY_PATH_MAP } from '@/utils/constants';
+import { isValidCategory } from '@/utils/typeGuards';
+import type { Post } from '@/contentlayer/generated';
 
 type PostMetaAreaProps = {
   post: Post;

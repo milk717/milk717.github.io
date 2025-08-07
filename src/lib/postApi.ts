@@ -1,5 +1,5 @@
-import {allPosts} from '@/contentlayer/generated';
-import {DEV_LOG_CATEGORY_NAME} from '@/utils/constants';
+import { allPosts } from '@/contentlayer/generated';
+import { DEV_LOG_CATEGORY_NAME } from '@/utils/constants';
 
 export const getPostBySlug = (slug: string) => {
   return allPosts.find(post => post.slug === slug);
@@ -20,13 +20,13 @@ export const getAllPostByTag = (tag?: string) => {
 export const getPopularTags = (length?: number) => {
   const tagMap = new Map<string, number>();
 
-  allPosts.forEach(
-    post =>
-      post.category === DEV_LOG_CATEGORY_NAME &&
-      post.tags?.forEach(tag => {
+  for (const post of allPosts) {
+    if (post.category === DEV_LOG_CATEGORY_NAME) {
+      for (const tag of post.tags || []) {
         tagMap.set(tag, (tagMap.get(tag) || 0) + 1);
-      }),
-  );
+      }
+    }
+  }
 
   return Array.from(tagMap)
     .sort((a, b) => {
