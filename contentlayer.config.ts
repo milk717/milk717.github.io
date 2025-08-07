@@ -1,5 +1,5 @@
 // contentlayer.config.ts
-import {defineDocumentType, makeSource} from 'contentlayer/source-files';
+import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
@@ -7,7 +7,7 @@ import rehypePrettyCode from 'rehype-pretty-code';
 
 export const Book = defineDocumentType(() => ({
   name: 'Book',
-  filePathPattern: `book/*.md`,
+  filePathPattern: "book/*.md",
   contentType: 'mdx',
   fields: {
     created: {
@@ -78,7 +78,7 @@ export const Book = defineDocumentType(() => ({
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
-  filePathPattern: `**/*.md`,
+  filePathPattern: "**/*.md",
   contentType: 'mdx',
   fields: {
     title: {
