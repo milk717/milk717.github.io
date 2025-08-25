@@ -12,7 +12,7 @@ const MoreButton: React.FC<MoreButtonProps> = ({
 }) => {
   return (
     <Link
-      className="flex items-center gap-1 text-neutral-500 text-base px-2 py-2 rounded-lg cursor-pointer w-fit hover:bg-slate-100"
+      className="flex items-center gap-1 text-muted-foreground text-base px-2 py-2 rounded-lg cursor-pointer w-fit hover:underline hover:text-foreground"
       href={href}>
       {text}
       <ArrowRightIcon className="w-4 h-4" />

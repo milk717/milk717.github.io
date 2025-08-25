@@ -7,17 +7,17 @@ const TagPage = () => {
   return (
     <main>
       <div className="mb-8">
-        <h2 className="mb-2.5 text-3xl font-bold text-neutral-800">All tags</h2>
-        <p className="text-neutral-600">게시글의 모든 태그목록 입니다.</p>
+        <h2 className="mb-2.5 text-3xl font-bold text-foreground">All tags</h2>
+        <p className="text-muted-foreground">게시글의 모든 태그목록 입니다.</p>
       </div>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
         {tags.map(([tagName, tagCnt]) => (
           <Link
             key={tagName}
             href={`/post?tag=${tagName}`}
-            className="flex justify-between items-center bg-violet-50 px-4 py-3 rounded-lg cursor-pointer hover:bg-violet-100">
-            <p className="font-medium text-neutral-800"># {tagName}</p>
-            <p className="text-sm text-neutral-700">{tagCnt}</p>
+            className="flex justify-between items-center primary-hover bg-background px-4 py-3 border rounded-lg">
+            <p className="font-medium text-foreground"># {tagName}</p>
+            <p className="text-sm text-muted-foreground">{tagCnt}</p>
           </Link>
         ))}
       </div>

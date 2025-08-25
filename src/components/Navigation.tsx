@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 import {cn} from '@/lib/utils';
 
 const navigationItem = [
-  {name: '개발', path: '/dev'},
-  {name: '태그', path: '/tags'},
+  {name: 'Dev', path: '/dev'},
+  {name: 'Tags', path: '/tags'},
   // {name: '독서', path: '/book'},
 ];
 const Navigation = () => {
@@ -14,20 +14,18 @@ const Navigation = () => {
 
   return (
     <nav className="flex flex-col xs:flex-row justify-between pb-8 gap-2">
-      <div className="flex items-center justify-between">
-        <Link
-          className="py-2 px-3 rounded-lg font-bold text-xl hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50"
-          href="/">
-          🦄
+      <div className="flex items-center justify-between gap-x-8">
+        <Link className="py-2 rounded-lg font-semibold text-xl" href="/">
+          Sumin's Blog
         </Link>
-        <div className="block sm:block">
+        <div className="block sm:block space-x-4">
           {navigationItem.map(({name, path}) => (
             <Link
               key={path}
               className={cn(
-                `space-x-2 py-3 px-6 rounded-lg text-neutral-800 hover:bg-gradient-to-br hover:from-indigo-50 hover:via-purple-50 hover:to-blue-50`,
+                `space-x-2 rounded-lg text-muted-foreground`,
                 pathname === path
-                  ? 'font-semibold text-neutral-950'
+                  ? 'font-semibold text-foreground'
                   : 'font-normal',
               )}
               href={path}>

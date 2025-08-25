@@ -13,9 +13,11 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<PropsWithChildren> = ({children}) => {
   return (
     <html lang="ko">
-      <body className="relative bg-background p-4 max-w-4xl mx-auto">
-        <Navigation />
-        {children}
+      <body className="bg-sidebar">
+        <div className="relative max-w-4xl mx-auto p-4">
+          <Navigation />
+          {children}
+        </div>
       </body>
       <GoogleAnalytics gaId="G-K4QSH24CR7" />
     </html>
