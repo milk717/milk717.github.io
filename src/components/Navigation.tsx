@@ -6,9 +6,8 @@ import {cn} from '@/lib/utils';
 
 const navigationItem = [
   {name: '개발', path: '/dev'},
-  {name: '회고', path: '/memoir'},
-  {name: '학습', path: '/learning'},
-  {name: '독서', path: '/book'},
+  {name: '태그', path: '/tags'},
+  // {name: '독서', path: '/book'},
 ];
 const Navigation = () => {
   const pathname = usePathname();

@@ -8,9 +8,7 @@ const TagPage = () => {
     <main>
       <div className="mb-8">
         <h2 className="mb-2.5 text-3xl font-bold text-neutral-800">All tags</h2>
-        <p className="text-neutral-600">
-          개발 관련 게시글의 모든 태그목록 입니다.
-        </p>
+        <p className="text-neutral-600">게시글의 모든 태그목록 입니다.</p>
       </div>
       <div className="grid grid-cols-2 gap-3">
         {tags.map(([tagName, tagCnt]) => (

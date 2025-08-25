@@ -1,25 +1,22 @@
-import {getAllPostByCategory, getPopularTags} from '@/lib/postApi';
+import { getAllPosts, getPopularTags } from '@/lib/postApi';
 import Card from '@/components/Card';
 import TagItem from '@/components/TagItem';
 import MoreButton from '@/components/MoreButton';
-import {DEV_LOG_CATEGORY_NAME} from '@/utils/constants';
 
 const DevPage = () => {
-  const posts = getAllPostByCategory(DEV_LOG_CATEGORY_NAME);
+  const posts = getAllPosts();
   const tags = getPopularTags(4);
 
   return (
     <main>
       <div className="mb-8">
-        <h2 className="mb-2.5 text-3xl font-bold text-neutral-800">Dev logs</h2>
+        <h2 className="mb-2.5 text-3xl font-bold text-neutral-800">Dev Posts</h2>
         <p className="text-neutral-600">
-          개발하면서 직접 경험했던 것을 기록하고 있습니다.
+          개발과 관련된 게시글입니다.
         </p>
       </div>
       <section className="mb-8">
-        <h3 className="mb-2.5 text-xl font-bold text-neutral-800">
-          Popular tags
-        </h3>
+        <h3 className="mb-2.5 text-xl font-bold text-neutral-800">Tags</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-2">
           {tags.map(([tagName, tagCnt]) => (
             <TagItem key={tagName} tagName={tagName} tagCnt={tagCnt} />
@@ -29,9 +26,9 @@ const DevPage = () => {
       </section>
       <section>
         <h3 className="mb-2.5 text-xl font-bold text-neutral-800">
-          All posts ({posts.length})
+          Posts ({posts.length})
         </h3>
-        <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 xs:grid-cols-2 gap-4">
           {posts.map(post => (
             <Card key={post._id} post={post} />
           ))}

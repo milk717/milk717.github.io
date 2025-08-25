@@ -5,6 +5,10 @@ export const getPostBySlug = (slug: string) => {
   return allPosts.find(post => post.slug === slug);
 };
 
+export const getAllPosts = () => {
+  return allPosts.sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+};
+
 export const getAllPostByCategory = (category: string) => {
   return allPosts
     .filter(post => post.category === category)
