@@ -1,4 +1,4 @@
-import BookItem from '@/components/BookItem';
+import BookItem from '@/components/book-item';
 import {allBooks} from '@/contentlayer/generated';
 
 const BookPage = () => {

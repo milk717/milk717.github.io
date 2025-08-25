@@ -14,7 +14,7 @@ const profileInfo = [
   {name: 'Resume', Icon: FileUserIcon, link: BlogInfo.profile.link.resume},
 ];
 
-const Profile = () => {
+export const Profile = () => {
   return (
     <section className="flex flex-col gap-y-4">
       <div className="flex items-center gap-6">
@@ -47,5 +47,3 @@ const Profile = () => {
     </section>
   );
 };
-
-export default Profile;

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import type { PropsWithChildren } from 'react';
-import Navigation from '@/components/Navigation';
+import {Navigation} from '@/components/navigation';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 import './globals.css';

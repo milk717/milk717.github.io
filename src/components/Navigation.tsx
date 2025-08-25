@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import Search from '@/components/Search';
+import {Search} from '@/components/search';
 import { usePathname } from 'next/navigation';
 import {cn} from '@/lib/utils';
 
@@ -9,7 +9,8 @@ const navigationItem = [
   {name: 'Tags', path: '/tags'},
   // {name: '독서', path: '/book'},
 ];
-const Navigation = () => {
+
+export const Navigation = () => {
   const pathname = usePathname();
 
   return (
@@ -39,4 +40,3 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;

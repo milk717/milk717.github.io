@@ -1,12 +1,12 @@
 import Link from 'next/link';
-import {ArrowRightIcon} from 'lucide-react';
+import { ArrowRightIcon } from 'lucide-react';
 
 type MoreButtonProps = {
   text?: string;
   href?: string;
 };
 
-const MoreButton: React.FC<MoreButtonProps> = ({
+export const MoreButton: React.FC<MoreButtonProps> = ({
   text = 'More Post',
   href = 'post',
 }) => {
@@ -20,4 +20,3 @@ const MoreButton: React.FC<MoreButtonProps> = ({
   );
 };
 
-export default MoreButton;

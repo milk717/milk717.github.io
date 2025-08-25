@@ -1,7 +1,7 @@
 import { getAllPosts, getPopularTags } from '@/lib/postApi';
-import Card from '@/components/Card';
-import TagItem from '@/components/TagItem';
-import MoreButton from '@/components/MoreButton';
+import {Card} from '@/components/card';
+import {TagItem} from '@/components/tag-item';
+import {MoreButton} from '@/components/more-button';
 
 const DevPage = () => {
   const posts = getAllPosts();

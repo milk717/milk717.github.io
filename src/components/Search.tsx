@@ -19,7 +19,7 @@ const highlightKeyword = (text: string, keyword: string) => {
     ));
 };
 
-const Search = () => {
+export const Search = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [keyword, setKeyword] = useState('');
 
@@ -98,5 +98,3 @@ const Search = () => {
     </div>
   );
 };
-
-export default Search;

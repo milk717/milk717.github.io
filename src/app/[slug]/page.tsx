@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from 'next/navigation';
 import { getPostBySlug } from "@/lib/postApi";
 import PostMetaArea from '@/app/[slug]/_components/PostMetaArea';
-import MdxComponents from '@/components/MdxComponents';
-import UtterancesComments from '@/components/UtterancesComments';
+import MdxComponents from '@/components/mdx-component';
+import UtterancesComments from '@/components/utterances-comments';
 import BlogInfo from '@/BlogInfo.json';
 
 type Params = {

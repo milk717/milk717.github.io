@@ -6,13 +6,13 @@ import {cn} from '@/lib/utils';
 
 type CardProps = {post: Post};
 
-const Card: React.FC<CardProps> = ({post}) => {
+export const Card: React.FC<CardProps> = ({post}) => {
   return (
     <Link
       as={`/${post.slug}`}
       href="/[slug]"
       className={cn(
-        'flex flex-col sm:flex-row gap-x-5 gap-y-4 rounded-lg p-2 cursor-pointer border',
+        'flex flex-col sm:flex-row gap-x-5 gap-y-4 rounded-lg p-4 cursor-pointer border',
         'hover:ring-1 hover:ring-indigo-200 primary-hover bg-card',
       )}>
       <Image
@@ -39,5 +39,3 @@ const Card: React.FC<CardProps> = ({post}) => {
     </Link>
   );
 };
-
-export default Card;
