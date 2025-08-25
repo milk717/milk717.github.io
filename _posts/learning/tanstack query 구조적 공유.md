@@ -1,13 +1,13 @@
 ---
 date: 2025-08-19
 title: TanStack Query의 구조적 공유와 React 리랜더링에 대한 학습과 관찰
-excerpt: TanStack Query의 구조적 공유 동작을 분석하고, 컨테이너 참조 변화로 인한 불필요한 리렌더를 관찰했습니다. React Profiler 실험을 바탕으로 React.memo, select, 단건 쿼리 등 실제로 쓸 수 있는 최적화 방법과 장단점을 정리했습니다.
+excerpt: TanStack Query의 구조적 공유 동작을 분석하고, React 컴포넌트의 리랜더링을 관찰했습니다.
 category: 학습
 tags:
   - tanstack-query
 thumbnail: https://i.imgur.com/Fm8Si32.png
 slug: tanstack-query-structural-sharing
-updated: 2025-08-26T00:13
+updated: 2025-08-26T00:33
 ---
 TanStack Query를 쓰다가 문득 이런 의문이 들었습니다. 
 
