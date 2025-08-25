@@ -1,44 +1,13 @@
-// import { withContentlayer } from 'next-contentlayer';
+import { withContentlayer } from 'next-contentlayer';
 
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//     pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-//     images: {
-//         remotePatterns: [
-//             {
-//                 protocol: 'https',
-//                 hostname: 'www.milk717.com',
-//             },
-//             {
-//                 protocol: 'https',
-//                 hostname: 'avatars.githubusercontent.com',
-//             },
-//             {
-//                 protocol: 'https',
-//                 hostname: 'milk717.imgur.com',
-//             },
-//             {
-//                 protocol: 'https',
-//                 hostname: 'i.imgur.com',
-//             },
-//             {
-//                 protocol: 'https',
-//                 hostname: 'image.yes24.com'
-//             }
-//         ],
-//     },
-// };
-
-// export default withContentlayer(nextConfig);
-
-
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-      images: {
+    pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+    images: {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: 'www.milk717.me',
+                hostname: 'www.milk717.com',
             },
             {
                 protocol: 'https',
@@ -60,4 +29,4 @@ const nextConfig = {
     },
 };
 
-export default nextConfig;
+export default withContentlayer(nextConfig);
