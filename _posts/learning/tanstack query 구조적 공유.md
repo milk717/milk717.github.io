@@ -7,7 +7,7 @@ tags:
   - tanstack-query
 thumbnail: https://i.imgur.com/Fm8Si32.png
 slug: tanstack-query-structural-sharing
-updated: 2025-08-26T00:08
+updated: 2025-08-26T00:13
 ---
 TanStack Query를 쓰다가 문득 이런 의문이 들었습니다. 
 
