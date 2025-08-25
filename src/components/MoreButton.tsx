@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import {ArrowRightIcon} from 'lucide-react';
 
 type MoreButtonProps = {
   text?: string;
@@ -15,12 +15,7 @@ const MoreButton: React.FC<MoreButtonProps> = ({
       className="flex items-center gap-1 text-neutral-500 text-base px-2 py-2 rounded-lg cursor-pointer w-fit hover:bg-slate-100"
       href={href}>
       {text}
-      <Image
-        src="/arrow-right.svg"
-        alt="see all posts"
-        width={14}
-        height={14}
-      />
+      <ArrowRightIcon className="w-4 h-4" />
     </Link>
   );
 };

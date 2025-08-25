@@ -1,28 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import BlogInfo from '@/BlogInfo.json';
+import {AtSignIcon, FileUserIcon, GithubIcon, Linkedin} from 'lucide-react';
 
 const profileInfo = [
   {
     name: 'Email',
-    image: '/gmail.svg',
+    Icon: AtSignIcon,
     link: `mailto:${BlogInfo.profile.link.email}`,
   },
-  {
-    name: 'Github',
-    image: '/github.svg',
-    link: BlogInfo.profile.link.github,
-  },
-  {
-    name: 'LinkedIn',
-    image: '/linkedin.svg',
-    link: BlogInfo.profile.link.linkedIn,
-  },
-  {
-    name: 'Resume',
-    image: '/figma.svg',
-    link: BlogInfo.profile.link.resume,
-  },
+  {name: 'Github', Icon: GithubIcon, link: BlogInfo.profile.link.github},
+  {name: 'LinkedIn', Icon: Linkedin, link: BlogInfo.profile.link.linkedIn},
+  {name: 'Resume', Icon: FileUserIcon, link: BlogInfo.profile.link.resume},
 ];
 
 const Profile = () => {
@@ -46,13 +35,12 @@ const Profile = () => {
         </div>
       </div>
       <div className="flex flex-wrap gap-x-6 gap-y-1">
-        {profileInfo.map(({name, image, link}) => (
+        {profileInfo.map(({name, Icon, link}) => (
           <Link
             key={link}
             className="flex items-center gap-1.5 h-fit cursor-pointer hover:underline"
             href={link}>
-            <Image src={image} alt={`${name} Logo`} width={16} height={16} />
-            {name}
+            <Icon className="w-4 h-4" /> {name}
           </Link>
         ))}
       </div>
