@@ -9,8 +9,8 @@ export default function Home() {
       <main className="flex flex-col gap-y-8">
         <Profile />
         <section>
-          <h2 className="mb-2.5 text-3xl font-bold text-neutral-800">
-            Recent Posts
+          <h2 className="mb-2.5 text-2xl font-bold text-foreground">
+            최근 게시글
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-2">
             {getAllPostByTag()

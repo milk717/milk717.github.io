@@ -34,7 +34,7 @@ const Search = () => {
   };
 
   return (
-    <div className="flex relative gap-x-2 px-4 py-2 w-full sm:w-1/4 bg-indigo-50 rounded-lg">
+    <div className="flex relative gap-x-2 px-4 py-2 w-full xs:w-1/4 bg-indigo-50 rounded-lg">
       <svg
         className="w-4"
         fill="#737373"
