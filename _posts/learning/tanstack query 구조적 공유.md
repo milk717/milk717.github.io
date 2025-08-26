@@ -365,3 +365,10 @@ TanStack Query를 쓰다가 든 의문에서 시작해 공부를 진행하다 �
 - 그래도 여전히 느리다면 select, React.memo, API 응답 정규화 같은 방법을 쓰자.
  
 긴 글 읽어주셔서 감사합니다. 궁금한 점이나 피드백은 언제든지 환영합니다.
+
+# 참고자료
+- [React Query Render Optimizations \| TkDodo's blog](https://tkdodo.eu/blog/react-query-render-optimizations#structural-sharing)
+- [Fix the slow render before you fix the re-render](https://kentcdodds.com/blog/fix-the-slow-render-before-you-fix-the-re-render)
+- [React, Inline Functions, and Performance](https://reacttraining.com/blog/react-inline-functions-and-performance)
+- [query/packages/query-core/src/utils.ts at b6516bd25edcc67dfaced09412f52c9660386a9b · TanStack/query · GitHub](https://github.com/TanStack/query/blob/b6516bd25edcc67dfaced09412f52c9660386a9b/packages/query-core/src/utils.ts#L253-L292)
+- [query/src/core/tests/utils.test.tsx at 80cecef22c3e088d6cd9f8fbc5cd9e2c0aab962f · TanStack/query · GitHub](https://github.com/TanStack/query/blob/80cecef22c3e088d6cd9f8fbc5cd9e2c0aab962f/src/core/tests/utils.test.tsx#L97-L304)
