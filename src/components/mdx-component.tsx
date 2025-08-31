@@ -3,6 +3,7 @@
 import type { MDXComponents } from "mdx/types";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { ObsidianCallout } from "obsidian-callouts-markdown";
+import { cn } from "@/lib/utils";
 
 const components: MDXComponents = {
 	h1: (props) => (
@@ -42,7 +43,10 @@ const components: MDXComponents = {
 	),
 	span: (props) => (
 		<span
-			className="text-base text-foreground leading-loose group-aria-[label=inline-code-block]:text-sm group-aria-[label=inline-code-block]:text-violet-800"
+			className={cn(
+				"text-base text-foreground leading-loose",
+				"group-data-[block-type=inline-code-block]:text-sm group-data-[block-type=inline-code-block]:text-violet-800"
+			)}
 			{...props}>
 			{props.children}
 		</span>
@@ -64,7 +68,11 @@ const components: MDXComponents = {
 	),
 	code: (props) => (
 		<code
-			className="text-sm font-medium leading-loose px-1 py-0.5 mx-0.5 rounded bg-violet-50 border border-violet-300 group group-data-[block-type=code-block]:bg-transparent group-data-[block-type=code-block]:border-none"
+			className={cn(
+				"text-sm font-medium leading-loose px-1 py-0.5 mx-0.5 rounded bg-violet-50",
+				"group-data-[block-type=code-block]:bg-transparent group-data-[block-type=code-block]:border-none",
+				"not-group-data-[block-type=code-block]:ring-1 ring-violet-300 not-group-data-[block-type=code-block]:text-primary"
+			)}
 			data-block-type="inline-code-block"
 			{...props}>
 			{props.children}
