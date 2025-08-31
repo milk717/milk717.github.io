@@ -58,13 +58,14 @@ const components: MDXComponents = {
 		</a>
 	),
 	pre: (props) => (
-		<pre className="p-3 rounded-lg overflow-x-scroll bg-[#282c34] group leading-loose" {...props}>
+		<pre className="p-3 rounded-lg overflow-x-scroll bg-[#282c34] group leading-loose" data-block-type="code-block" {...props}>
 			{props.children}
 		</pre>
 	),
 	code: (props) => (
 		<code
-			className="text-sm font-medium leading-loose px-1 py-0.5 mx-0.5 rounded bg-violet-50 border border-violet-300 group group-aria-[label=code-block]:bg-transparent group-aria-[label=code-block]:border-none"
+			className="text-sm font-medium leading-loose px-1 py-0.5 mx-0.5 rounded bg-violet-50 border border-violet-300 group group-data-[block-type=code-block]:bg-transparent group-data-[block-type=code-block]:border-none"
+			data-block-type="inline-code-block"
 			{...props}>
 			{props.children}
 		</code>
