@@ -1,6 +1,6 @@
-import { Image } from "@/components/ui/image";
 import Link from "next/link";
 import BlogInfo from "@/BlogInfo.json";
+import { Image } from "@/components/ui/image";
 
 type TagItemProps = { tagName: string; tagCnt: number };
 
@@ -13,7 +13,7 @@ export const TagItem: React.FC<TagItemProps> = ({ tagName, tagCnt }) => {
 			className="flex flex-col items-center gap-y-2 rounded-lg bg-card border p-4 cursor-pointer primary-hover">
 			<Image
 				className="object-cover rounded-lg w-20 h-20"
-				// @ts-ignore
+				// @ts-expect-error
 				src={BlogInfo.tagImages[tagName]}
 				alt={`${tagName}의 썸네일`}
 				width={100}
