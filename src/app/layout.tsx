@@ -2,7 +2,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import type { PropsWithChildren } from "react";
 
-import "./globals.css";
+import "./global.css";
 import { Navigation } from "@/components/navigation";
 
 export const metadata: Metadata = {
