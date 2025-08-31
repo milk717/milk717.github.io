@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import MdxComponents from '@/components/mdx-component';
-import UtterancesComments from '@/components/utterances-comments';
+import MdxComponents from "@/components/mdx-component";
+import UtterancesComments from "@/components/utterances-comments";
 import { getBookBySlug } from "@/lib/bookApi";
 import BookMetaArea from "@/app/book/[slug]/_components/BookMetaArea";
 import BlogInfo from "@/BlogInfo.json";
@@ -30,9 +30,7 @@ export default async function Post({ params }: Params) {
 		</>
 	);
 }
-export const generateMetadata = async ({
-	params,
-}: Params): Promise<Metadata> => {
+export const generateMetadata = async ({ params }: Params): Promise<Metadata> => {
 	const { slug } = await params;
 	const book = getBookBySlug(slug);
 

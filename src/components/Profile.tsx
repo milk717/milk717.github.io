@@ -27,21 +27,13 @@ export const Profile = () => {
 					height={100}
 				/>
 				<div>
-					<h1 className="text-xl font-bold text-foreground">
-						{BlogInfo.profile.name}
-					</h1>
-					<p className="text-sm text-muted-foreground">
-						{BlogInfo.profile.introduce}
-					</p>
+					<h1 className="text-xl font-bold text-foreground">{BlogInfo.profile.name}</h1>
+					<p className="text-sm text-muted-foreground">{BlogInfo.profile.introduce}</p>
 				</div>
 			</div>
 			<div className="flex flex-wrap gap-x-6 gap-y-1">
 				{profileInfo.map(({ name, Icon, link }) => (
-					<Link
-						key={link}
-						className="flex items-center gap-1.5 h-fit cursor-pointer hover:underline text-foreground"
-						href={link}
-					>
+					<Link key={link} className="flex items-center gap-1.5 h-fit cursor-pointer hover:underline text-foreground" href={link}>
 						<Icon className="w-4 h-4" /> {name}
 					</Link>
 				))}
