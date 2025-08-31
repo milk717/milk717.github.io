@@ -1,8 +1,8 @@
 'use client';
-import Link from 'next/link';
-import {Search} from '@/components/search';
+import Link from "next/link";
 import { usePathname } from 'next/navigation';
-import {cn} from '@/lib/utils';
+import { cn } from "@/lib/utils";
+import { Search } from "@/components/search";
 
 const navigationItem = [
   {name: 'Dev', path: '/dev'},

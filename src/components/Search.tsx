@@ -8,15 +8,19 @@ const highlightKeyword = (text: string, keyword: string) => {
   const regExp = new RegExp(`(${keyword})`, 'i');
 
   return text
-    .split(regExp)
-    .filter(v => v)
-    .map((word, index) => (
-      <span
-        key={`${word}-${index}`}
-        className={`${word.match(regExp)?.at(0) ? 'bg-violet-100 py-1 rounded text-violet-800 ring-1 ring-violet-400' : ''}`}>
-        {word}
-      </span>
-    ));
+			.split(regExp)
+			.filter((v) => v)
+			.map((word, index) => (
+				<span
+					key={`${word}-${
+						// biome-ignore lint/suspicious/noArrayIndexKey: 리스트 순서 변하지 않음
+						index
+					}`}
+					className={`${word.match(regExp)?.at(0) ? "bg-violet-100 py-1 rounded text-violet-800 ring-1 ring-violet-400" : ""}`}
+				>
+					{word}
+				</span>
+			));
 };
 
 export const Search = () => {
