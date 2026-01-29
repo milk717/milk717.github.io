@@ -1,9 +1,10 @@
 "use client";
 
+import type { PropsWithChildren } from "react";
 import type { MDXComponents } from "mdx/types";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { ObsidianCallout } from "obsidian-callouts-markdown";
 import { cn } from "@/lib/utils";
+import { CalloutBody, CalloutComponent, CalloutTitle } from "@/components/callout";
 
 const components: MDXComponents = {
 	h1: (props) => (
@@ -119,12 +120,36 @@ const components: MDXComponents = {
 		</td>
 	),
 	blockquote: (props) => (
-		<ObsidianCallout
-			components={{
-				normal: (props) => <div className="border-l-4 border-l-indigo-200 ps-2 leading-loose">{props.children}</div>,
-			}}
+		<div className="my-4 border-l-4 border-l-indigo-200 ps-4 leading-loose text-foreground" {...props}>
+			{props.children}
+		</div>
+	),
+	callout: (
+		props: PropsWithChildren<{
+			type?: string;
+			isFoldable?: boolean;
+			defaultFolded?: boolean;
+			/** MDX/HTML 소문자 속성 대응 */
+			isfoldable?: boolean;
+			defaultfolded?: boolean;
+		}>,
+	) => (
+		<CalloutComponent
+			type={props.type ?? "note"}
+			isFoldable={props.isFoldable ?? props.isfoldable}
+			defaultFolded={props.defaultFolded ?? props.defaultfolded}
 			{...props}
-		/>
+		>
+			{props.children}
+		</CalloutComponent>
+	),
+	"callout-title": (props: PropsWithChildren<{ type?: string; isFoldable?: boolean }>) => (
+		<CalloutTitle type={props.type ?? "note"} isFoldable={props.isFoldable} {...props}>
+			{props.children}
+		</CalloutTitle>
+	),
+	"callout-body": (props: PropsWithChildren) => (
+		<CalloutBody {...props}>{props.children}</CalloutBody>
 	),
 	img: (props) => <img {...props} className="my-4" alt={props.alt} />,
 };

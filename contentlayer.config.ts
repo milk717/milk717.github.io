@@ -1,9 +1,11 @@
 // contentlayer.config.ts
+import type { Callout } from "@r4ai/remark-callout";
+import remarkCallout from "@r4ai/remark-callout";
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
-import remarkGfm from "remark-gfm";
-import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
+import rehypeSlug from "rehype-slug";
+import remarkGfm from "remark-gfm";
 
 export const Book = defineDocumentType(() => ({
 	name: "Book",
@@ -128,7 +130,32 @@ const contentSource = makeSource({
 	documentTypes: [Book, Post],
 	contentDirExclude: ["**/.obsidian/**", "**/_template/**"],
 	mdx: {
-		remarkPlugins: [remarkGfm],
+		remarkPlugins: [
+			remarkGfm,
+			[
+				remarkCallout,
+				{
+					root: (callout: Callout) => ({
+						tagName: "callout",
+						properties: {
+							type: callout.type,
+							isFoldable: callout.isFoldable,
+							defaultFolded: callout.defaultFolded,
+						},
+					}),
+					title: (callout: Callout) => ({
+						tagName: "callout-title",
+						properties: {
+							type: callout.type,
+							isFoldable: callout.isFoldable,
+						},
+					}),
+					body: () => ({
+						tagName: "callout-body",
+					}),
+				},
+			],
+		],
 		rehypePlugins: [
 			rehypeSlug,
 			[
