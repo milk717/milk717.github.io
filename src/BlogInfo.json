@@ -1,27 +1,27 @@
 {
-	"siteUrl": "https://www.milk717.me",
-	"profile": {
-		"name": "Sumin",
-		"introduce": "무엇이든 만드는 것을 좋아합니다.",
-		"profileImage": "https://avatars.githubusercontent.com/u/57657868?v=4",
-		"link": {
-			"email": "robolindasoo@gmail.com",
-			"github": "https://github.com/milk717",
-			"linkedIn": "https://www.linkedin.com/in/%EC%88%98%EB%AF%BC-%EA%B9%80-975393287/",
-			"resume": "https://resume.milk717.me"
-		}
-	},
-	"category": {
-		"dev": "개발",
-		"memoir": "회고",
-		"learning": "학습",
-		"book": "독서"
-	},
-	"tagImages": {
-		"프로젝트": "",
-		"곰터뷰": "https://i.imgur.com/LJDSrWl.png",
-		"네이버-부스트캠프": "https://i.imgur.com/BimYjwU.png",
-		"Bixby": "https://i.imgur.com/UwMoiZP.png",
-		"Gatsby": "https://i.imgur.com/QAt5e8A.png"
-	}
+  "siteUrl": "https://www.milk717.me",
+  "profile": {
+    "name": "Sumin",
+    "introduce": "무엇이든 만드는 것을 좋아합니다.",
+    "profileImage": "https://avatars.githubusercontent.com/u/57657868?v=4",
+    "link": {
+      "email": "robolindasoo@gmail.com",
+      "github": "https://github.com/milk717",
+      "linkedIn": "https://www.linkedin.com/in/%EC%88%98%EB%AF%BC-%EA%B9%80-975393287/",
+      "resume": "https://resume.milk717.me"
+    }
+  },
+  "category": {
+    "dev": "개발",
+    "memoir": "회고",
+    "learning": "학습",
+    "book": "독서"
+  },
+  "tagImages": {
+    "프로젝트": "",
+    "곰터뷰": "https://i.imgur.com/LJDSrWl.png",
+    "네이버-부스트캠프": "https://i.imgur.com/BimYjwU.png",
+    "Bixby": "https://i.imgur.com/UwMoiZP.png",
+    "Gatsby": "https://i.imgur.com/QAt5e8A.png"
+  }
 }

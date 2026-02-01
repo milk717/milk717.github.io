@@ -1,9 +1,9 @@
-import { allBooks } from "@/contentlayer/generated";
+import { allBooks } from '@/contentlayer/generated';
 
 export const getBookBySlug = (slug: string) => {
-	return allBooks.find((book) => book.slug === slug);
+  return allBooks.find((book) => book.slug === slug);
 };
 
 export const getAllBooksByRate = (rate: number) => {
-	return allBooks.filter((book) => book.my_rate === rate);
+  return allBooks.filter((book) => book.my_rate === rate);
 };

@@ -1,14 +1,14 @@
-import { GoogleAnalytics } from "@next/third-parties/google";
-import type { Metadata } from "next";
-import type { PropsWithChildren } from "react";
+import { GoogleAnalytics } from '@next/third-parties/google';
+import type { Metadata } from 'next';
+import type { PropsWithChildren } from 'react';
 
-import "./global.css";
-import { Navigation } from "@/components/navigation";
-import { Footer } from "@/components/footer";
+import './global.css';
+import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/footer';
 
 export const metadata: Metadata = {
-	title: "Milk717 Blog",
-	description: "Milk717 블로그 입니다.",
+  title: 'Milk717 Blog',
+  description: 'Milk717 블로그 입니다.',
 };
 
 const RootLayout: React.FC<PropsWithChildren> = ({ children }) => {
