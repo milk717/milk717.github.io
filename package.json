@@ -9,14 +9,14 @@
 		"start": "next start",
 		"lint": "biome check .",
 		"format": "biome format --write .",
-		"sdks": "yarn dlx @yarnpkg/sdks vscode"
+		"sdks": "pnpm dlx @yarnpkg/sdks vscode"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.18",
 		"@mdx-js/loader": "^3.0.1",
 		"@mdx-js/react": "^3.0.1",
-		"@next/mdx": "^14.1.4",
-		"@next/third-parties": "^14.2.3",
+		"@next/mdx": "^15.1.0",
+		"@next/third-parties": "^15.1.0",
 		"@r4ai/remark-callout": "^0.6.2",
 		"@radix-ui/react-accordion": "^1.2.2",
 		"@radix-ui/react-aspect-ratio": "^1.1.7",
@@ -26,10 +26,9 @@
 		"dayjs": "^1.11.10",
 		"glob": "^10.3.12",
 		"lucide-react": "^0.541.0",
-		"next": "14",
-		"obsidian-callouts-markdown": "^1.0.5",
-		"react": "^18",
-		"react-dom": "^18",
+		"next": "^15.1.0",
+		"react": "^19",
+		"react-dom": "^19",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-pretty-code": "^0.13.1",
 		"rehype-slug": "^6.0.0",
@@ -43,13 +42,13 @@
 		"@tailwindcss/postcss": "^4",
 		"@types/mdx": "^2.0.12",
 		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
 		"next-contentlayer": "^0.3.4",
 		"next-sitemap": "^4.2.3",
 		"tailwindcss": "^4",
 		"tw-animate-css": "^1.3.6",
 		"typescript": "^5"
 	},
-	"packageManager": "yarn@4.9.4"
+	"packageManager": "pnpm@10.0.0"
 }

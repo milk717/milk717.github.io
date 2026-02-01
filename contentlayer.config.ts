@@ -133,6 +133,7 @@ const contentSource = makeSource({
 		remarkPlugins: [
 			remarkGfm,
 			[
+				// @ts-ignore - remarkCallout 타입 호환성 문제
 				remarkCallout,
 				{
 					root: (callout: Callout) => ({

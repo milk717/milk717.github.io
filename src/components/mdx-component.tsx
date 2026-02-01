@@ -136,15 +136,15 @@ const components: MDXComponents = {
 	) => (
 		<CalloutComponent
 			type={props.type ?? "note"}
-			isFoldable={props.isFoldable ?? props.isfoldable}
-			defaultFolded={props.defaultFolded ?? props.defaultfolded}
+			isFoldable={props.isFoldable ?? props.isfoldable ?? false}
+			defaultFolded={props.defaultFolded ?? props.defaultfolded ?? false}
 			{...props}
 		>
 			{props.children}
 		</CalloutComponent>
 	),
 	"callout-title": (props: PropsWithChildren<{ type?: string; isFoldable?: boolean }>) => (
-		<CalloutTitle type={props.type ?? "note"} isFoldable={props.isFoldable} {...props}>
+		<CalloutTitle type={props.type ?? "note"} isFoldable={props.isFoldable ?? false} {...props}>
 			{props.children}
 		</CalloutTitle>
 	),
