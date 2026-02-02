@@ -1,7 +1,8 @@
 'use client';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search } from '@/components/search';
+import { ThemeToggle } from '@/components/theme-toggle';
 import { cn } from '@/lib/utils';
 
 const navigationItem = [
@@ -34,7 +35,10 @@ export const Navigation = () => {
           ))}
         </div>
       </div>
-      <Search />
+      <div className="flex items-center gap-2">
+        {/* <Search /> */}
+        <ThemeToggle />
+      </div>
     </nav>
   );
 };
