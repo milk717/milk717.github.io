@@ -151,8 +151,11 @@ const contentSource = makeSource({
 							isFoldable: callout.isFoldable,
 						},
 					}),
-					body: () => ({
+					body: (callout: Callout) => ({
 						tagName: "callout-body",
+						properties: {
+							type: callout.type,
+						},
 					}),
 				},
 			],

@@ -10,9 +10,10 @@ const components: MDXComponents = {
   h1: (props) => (
     <h1
       className={cn(
-        'text-3xl text-foreground my-8',
+        'text-3xl text-foreground font-bold my-8',
         'heading-indicator heading-h1',
-        "hover:after:content-['#'] after:mx-1 after:text-neutral-200",
+        'hover:before:content-["H1"] hover:before:text-xs hover:before:text-muted-foreground',
+        'hover:before:absolute hover:before:-left-6 hover:before:top-1/2 hover:before:-translate-y-1/2',
       )}
       {...props}
     >
@@ -22,9 +23,10 @@ const components: MDXComponents = {
   h2: (props) => (
     <h2
       className={cn(
-        'text-2xl text-foreground my-7',
+        'text-2xl text-foreground font-bold my-7',
         'heading-indicator heading-h2',
-        "hover:after:content-['#'] after:mx-1 after:text-neutral-200",
+        'hover:before:content-["H2"] hover:before:text-xs hover:before:text-muted-foreground',
+        'hover:before:absolute hover:before:-left-6 hover:before:top-1/2 hover:before:-translate-y-1/2',
       )}
       {...props}
     >
@@ -34,9 +36,10 @@ const components: MDXComponents = {
   h3: (props) => (
     <h3
       className={cn(
-        'text-xl text-foreground mt-6 mb-4',
+        'text-xl text-foreground font-bold mt-6 mb-4',
         'heading-indicator heading-h3',
-        "hover:after:content-['#'] after:mx-1 after:text-neutral-200",
+        'hover:before:content-["H3"] hover:before:text-xs hover:before:text-muted-foreground',
+        'hover:before:absolute hover:before:-left-6 hover:before:top-1/2 hover:before:-translate-y-1/2',
       )}
       {...props}
     >
@@ -46,9 +49,10 @@ const components: MDXComponents = {
   h4: (props) => (
     <h4
       className={cn(
-        'text-lg text-foreground mt-2 mb-0.5',
+        'text-lg text-foreground font-semibold mt-2 mb-0.5',
         'heading-indicator heading-h4',
-        "hover:after:content-['#'] after:mx-1 after:text-neutral-200",
+        'hover:before:content-["H4"] hover:before:text-xs hover:before:text-muted-foreground',
+        'hover:before:absolute hover:before:-left-6 hover:before:top-1/2 hover:before:-translate-y-1/2',
       )}
       {...props}
     >
@@ -58,9 +62,10 @@ const components: MDXComponents = {
   h5: (props) => (
     <h5
       className={cn(
-        'text-base text-foreground mt-1 mb-0.5',
+        'text-base text-foreground font-semibold mt-1 mb-0.5',
         'heading-indicator heading-h5',
-        "hover:after:content-['#'] after:mx-1 after:text-neutral-200",
+        'hover:before:content-["H5"] hover:before:text-xs hover:before:text-muted-foreground',
+        'hover:before:absolute hover:before:-left-6 hover:before:top-1/2 hover:before:-translate-y-1/2',
       )}
       {...props}
     >
@@ -70,9 +75,10 @@ const components: MDXComponents = {
   h6: (props) => (
     <h6
       className={cn(
-        'text-base text-foreground mt-1 mb-0.5',
+        'text-base text-foreground font-semibold mt-1 mb-0.5',
         'heading-indicator heading-h6',
-        "hover:after:content-['#'] after:mx-1 after:text-neutral-200",
+        'hover:before:content-["H6"] hover:before:text-xs hover:before:text-muted-foreground',
+        'hover:before:absolute hover:before:-left-6 hover:before:top-1/2 hover:before:-translate-y-1/2',
       )}
       {...props}
     >
@@ -85,13 +91,7 @@ const components: MDXComponents = {
     </p>
   ),
   span: (props) => (
-    <span
-      className={cn(
-        'text-base text-foreground leading-loose',
-        'group-data-[block-type=inline-code-block]:text-sm group-data-[block-type=inline-code-block]:text-violet-800',
-      )}
-      {...props}
-    >
+    <span className="text-inherit leading-loose" {...props}>
       {props.children}
     </span>
   ),
@@ -106,14 +106,26 @@ const components: MDXComponents = {
       {props.children}
     </em>
   ),
-  a: (props) => (
-    <a className="text-base leading-loose link-hover-effect" style={{ color: 'var(--text-link)' }} {...props}>
-      {props.children}
-    </a>
-  ),
+  a: (props) => {
+    const isHeadingAnchor =
+      (typeof props.className === 'string' && props.className.includes('anchor')) ||
+      (Array.isArray(props.className) && props.className.includes('anchor'));
+    return (
+      <a
+        className={cn(
+          'text-base leading-loose',
+          !isHeadingAnchor && 'link-hover-effect',
+        )}
+        style={!isHeadingAnchor ? { color: 'var(--text-link)' } : undefined}
+        {...props}
+      >
+        {props.children}
+      </a>
+    );
+  },
   pre: (props) => (
     <pre
-      className="p-3 rounded-lg overflow-x-scroll bg-[#282c34] group leading-loose"
+      className="p-3 rounded-lg overflow-x-scroll group leading-loose bg-(--code-block-bg)"
       data-block-type="code-block"
       {...props}
     >
@@ -123,9 +135,9 @@ const components: MDXComponents = {
   code: (props) => (
     <code
       className={cn(
-        'text-sm font-medium leading-loose px-1 py-0.5 mx-0.5 rounded bg-violet-50',
+        'text-xs font-medium leading-loose px-1 py-0.5 mx-0.5 inline-code-block',
         'group-data-[block-type=code-block]:bg-transparent group-data-[block-type=code-block]:border-none',
-        'not-group-data-[block-type=code-block]:ring-1 ring-violet-300 not-group-data-[block-type=code-block]:text-primary',
+        'group-data-[block-type=code-block]:text-[0.8em]',
       )}
       data-block-type="inline-code-block"
       {...props}
@@ -155,7 +167,10 @@ const components: MDXComponents = {
     </table>
   ),
   thead: (props) => (
-    <thead className="text-foreground rounded-lg bg-gradient-to-br from-indigo-50 via-purple-50 to-blue-50" {...props}>
+    <thead
+      className="text-foreground rounded-lg bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50"
+      {...props}
+    >
       {props.children}
     </thead>
   ),
@@ -174,8 +189,14 @@ const components: MDXComponents = {
       {props.children}
     </td>
   ),
+  hr: (props) => (
+    <hr className="my-4 border-border" {...props} />
+  ),
   blockquote: (props) => (
-    <div className="my-4 border-l-4 border-l-indigo-200 ps-4 leading-loose text-foreground" {...props}>
+    <div
+      className="my-4 callout-default-bar bg-muted/50 rounded-lg px-4 py-2 leading-loose text-foreground"
+      {...props}
+    >
       {props.children}
     </div>
   ),
@@ -184,7 +205,6 @@ const components: MDXComponents = {
       type?: string;
       isFoldable?: boolean;
       defaultFolded?: boolean;
-      /** MDX/HTML 소문자 속성 대응 */
       isfoldable?: boolean;
       defaultfolded?: boolean;
     }>,
@@ -203,7 +223,11 @@ const components: MDXComponents = {
       {props.children}
     </CalloutTitle>
   ),
-  'callout-body': (props: PropsWithChildren) => <CalloutBody {...props}>{props.children}</CalloutBody>,
+  'callout-body': (props: PropsWithChildren<{ type?: string }>) => (
+    <CalloutBody type={props.type} {...props}>
+      {props.children}
+    </CalloutBody>
+  ),
   img: (props) => <img {...props} className="my-4" alt={props.alt} />,
 };
 

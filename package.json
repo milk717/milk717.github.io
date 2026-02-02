@@ -18,7 +18,7 @@
 		"@next/mdx": "^15.1.0",
 		"@next/third-parties": "^15.1.0",
 		"@r4ai/remark-callout": "^0.6.2",
-		"@radix-ui/react-accordion": "^1.2.2",
+		"@radix-ui/react-accordion": "^1.2.12",
 		"@radix-ui/react-aspect-ratio": "^1.1.7",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
